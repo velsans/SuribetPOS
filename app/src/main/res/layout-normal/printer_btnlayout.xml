@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/printer_listIcon"
+        android:layout_width="@dimen/textview_or_edittext_hight"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/textview_or_edittext_hight"
+        android:layout_marginRight="@dimen/textview_or_edittext_hight"
+        android:clickable="true"
+        android:src="@mipmap/printer"
+        android:visibility="visible" />
+</LinearLayout>

@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/gamingdate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:layout_gravity="top|right"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/gamingdate_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:paddingRight="10dp"
+            android:text="Gaming Date Is Closed"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white" />
+
+        <ToggleButton
+            android:id="@+id/gameopencloseBTN"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="5"
+            android:background="@drawable/toggle_selector"
+            android:checked="false"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/product_nameList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnWidth="120dp"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="20dp" />
+
+
+    <FrameLayout
+        android:id="@+id/passwordresetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80fefefe"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/textview_or_edittext_hight_large"
+            android:background="@drawable/login_btnbox"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Reset Password"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/txtNewPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_large"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:hint="New Password"
+                    android:inputType="numberPassword"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/color_whit" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/txtConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_large"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:hint="Confirm PassWord"
+                    android:inputType="numberPassword"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/color_whit" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/btnChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:background="@color/login_background"
+                android:text="Reset"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/layElectroTopup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_etop" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Electronic"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layTopupVoucher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_topup" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Topup"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layLivebet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hm_livebet" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Live Bet"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/laysportbet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_sportbet" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Sport Bet"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/laydailygame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_dailygame" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Daily Game"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/laylotto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/hm_lotto" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Lotto"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/laySalesCommission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_commission" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Commission"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_transection" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Transaction"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/hm_cashout" />
+
+
+                    <TextView
+                        android:id="@+id/txtPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="CashOut"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/primary_text"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

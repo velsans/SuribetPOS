@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Account Type:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_whit" />
+
+        <Spinner
+            android:id="@+id/accountList_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/trans_headerHeadverylightgreen" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Transaction Mode:"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_whit" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/radiobtngruop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/trans_headerHeadlightgreen"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pay_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="PAY"
+                    android:textColor="@color/color_whit" />
+
+                <RadioButton
+                    android:id="@+id/rec_radio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="REC"
+                    android:textColor="@color/color_whit" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/sample_blue"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/amount_eTxT"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:ems="10"
+                android:gravity="right|center"
+                android:hint="@string/Amount"
+                android:inputType="number"
+                android:paddingRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColorHint="@color/theme_yellow_text" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <Spinner
+                android:id="@+id/currency_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <EditText
+            android:id="@+id/transcomment_eTxT"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/trans_headerHeadblue2"
+            android:ems="10"
+            android:gravity="left|center"
+            android:hint="comments"
+            android:paddingLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColorHint="@color/theme_yellow_text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <TextView
+            android:id="@+id/transsave_txt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/trans_headerHeadblue"
+            android:gravity="center"
+            android:text="SAVE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimary" />
+    </LinearLayout>
+
+</LinearLayout>

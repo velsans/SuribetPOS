@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#2C2C2C</color>
+    <color name="colorPrimaryDark">#111216</color>
+    <color name="colorAccent">#FF5722</color>
+    <color name="rippelColor">#FFFFFF</color>
+    <color name="primary">#1E1E1E</color>
+    <color name="primary_heding">#515151</color>
+    <color name="primary_text">#E1E1E1</color>
+    <color name="Login_border">#787878</color>
+    <color name="login_background">#FF5722</color>
+    <color name="clear_back">#A22326</color>
+    <color name="betslip_back">#161A20</color>
+    <color name="backgroud">#26272B</color>
+    <color name="draw_group">#323232</color>
+    <color name="edittext_hint">#808080</color>
+
+
+    <color name="colorControlHighlight">#FFFFFF</color>
+
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#303030</color>
+    <color name="list_background_pressed">#992416</color>
+    <color name="counter_text_bg">#626262</color>
+    <color name="counter_text_color">#c5c4c4</color>
+
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="layout_gray">#333333</color>
+    <color name="layout_white">#FFFFFF</color>
+    <color name="grid_header_yellow">#faa813</color>
+    <color name="theme_background">#333333</color>
+    <color name="themelight_background">#555555</color>
+    <color name="theme_border">#757575</color>
+    <color name="icon_background">#464646</color>
+
+
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="grey">#778899</drawable>
+
+
+    <color name="abc_search_url_text_normal">#ff7fa87f</color>
+    <color name="abc_search_url_text_selected">@android:color/black</color>
+    <color name="abc_search_url_text_pressed">@android:color/black</color>
+    <color name="color_whit">#ffffffff</color>
+    <color name="color_black">#ff000000</color>
+    <color name="color_sandyBrown">#fff4a460</color>
+    <color name="color_lt_UpDown">#ffffd388</color>
+    <color name="greenMid">#ff0a8815</color>
+    <color name="cashOutgreen">#298a52</color>
+    <color name="balancehead">#b74349</color>
+
+    <color name="CancelbetColor">#009833</color>
+    <color name="material_animations_primary">#039BE5</color>
+    <color name="material_animations_primary_dark">#0277BD</color>
+    <color name="material_animations_accent">#3F51B5</color>
+    <color name="material_animations_accentlight">#d0d6f5</color>
+
+    <color name="text_light">@android:color/white</color>
+    <color name="text_dark">#616161</color>
+
+    <color name="sample_blue">#33b5e5</color>
+    <color name="sample_green">#669900</color>
+
+    <color name="TabColor">#A22326</color>
+    <color name="headblue">#42A5F5</color>
+
+
+    <!-- theme colors -->
+    <color name="theme_blue_background">#84ffff</color>
+    <color name="theme_blue_primary">#4FC3F7</color>
+    <color name="theme_blue_accent">#ff193a</color>
+    <color name="theme_blue_text">@color/text_dark</color>
+    <color name="theme_blue_text_inverse">@android:color/black</color>
+    <color name="theme_blue_primary_dark">#039BE5</color>
+
+    <color name="theme_green_background">#b9f6ca</color>
+    <color name="theme_green_primary">#669900</color>
+    <color name="theme_green_accent">#e919ff</color>
+    <color name="theme_green_text">@color/text_dark</color>
+    <color name="theme_green_primary_dark">#558B2F</color>
+
+    <color name="theme_purple_primary_dark">#6c4aa6</color>
+
+    <color name="theme_red_background">#ff8a80</color>
+    <color name="theme_red_primary">#ff5252</color>
+    <color name="theme_yellow_accent">#fffc19</color>
+    <color name="theme_red_text">@color/text_light</color>
+    <color name="theme_red_primary_dark">#e64a4a</color>
+
+    <color name="theme_yellow_background">#ffff8d</color>
+    <color name="theme_yellow_primary">#ff8800</color>
+    <color name="theme_yellow_text">@color/text_dark</color>
+    <color name="theme_yellow_primary_dark">#EF6C00</color>
+
+    <color name="green">#00e676</color>
+    <color name="red">#ff5252</color>
+    <color name="light_grey">#E0E0E0</color>
+
+    <color name="trans_headerHeadRed">#e51c23</color>
+    <color name="trans_headerHeadblue">#3f51b5</color>
+    <color name="trans_headerHeadlightgreen">#00bfa5</color>
+    <color name="trans_headerHeadblue2">#0288D1</color>
+    <color name="trans_headerHeadverylightgreen">#69f0ae</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="drawColor">#f1fff0</color>
+    <color name="jackpotColor">#008001</color>
+    <color name="oneColor">#ffc0c0</color>
+    <color name="twoColor">#fee1c1</color>
+    <color name="threerColor">#ffffbf</color>
+    <color name="fourColor">#c1ffc0</color>
+    <color name="fiveColor">#c1feff</color>
+    <color name="freeletterColor">#c0c0ff</color>
+    <color name="winnerColor">#e5e6fa</color>
+
+
+</resources>
+
+

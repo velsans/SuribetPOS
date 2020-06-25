@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Payoutpopup_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:background="@color/backgroud"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="1dp"
+            android:text="PAYOUT"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/LGPayoutLayoutClose"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:gravity="center"
+            android:padding="1dp"
+            android:src="@mipmap/cancelvoucherwhite"
+            android:textColor="@drawable/black"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/LGPayoutScannerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:src="@mipmap/barcodeicon"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@drawable/black"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/LGPayoutBarcodeEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/trans_headerHeadverylightgreen"
+            android:gravity="left|center"
+            android:hint="Enter Barcode"
+            android:padding="5dp"
+            android:text="376L17298479"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_black"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/LGPayoutSearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="2"
+            android:background="@color/material_animations_accent"
+            android:gravity="center"
+            android:text="SEARCH "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@color/theme_yellow_text"
+            android:gravity="center"
+            android:text="Location"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LGPayoutLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@color/theme_yellow_text"
+            android:gravity="center"
+            android:text="Slip Time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LGPayoutSlipTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="left|center"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:background="@color/theme_yellow_text"
+            android:gravity="center"
+            android:text="WIN"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/LGPayoutWinTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/backgroud"
+            android:gravity="center"
+            android:text="N/A"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <TextView
+        android:id="@+id/LGPayoutSRD"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_normal"
+        android:layout_gravity="center"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="N/A"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/possible_result_points"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <TextView
+        android:id="@+id/LGPayoutSlipStatus"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lottorecentsizeLarge"
+        android:layout_gravity="center"
+        android:background="@color/color_black"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="N/A"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/possible_result_points"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:background="@color/login_background" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_normal"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/LGPayoutPay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/color_lt_UpDown"
+            android:gravity="center"
+            android:text="PAY"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/LGPayoutClear"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:gravity="center"
+            android:text="CLEAR "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</LinearLayout>

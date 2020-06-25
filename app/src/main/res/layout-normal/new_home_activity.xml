@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical"
+    android:theme="@style/NormalTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:paddingRight="10dp"
+                android:text="@string/Select_Language"
+                android:textColor="@color/sample_blue" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorAccent">
+
+                <Spinner
+                    android:id="@+id/language_spinner"
+                    style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownVerticalOffset="@dimen/textview_or_edittext_hight"
+                    android:paddingRight="10dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forgetpassword_txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/Reset_Password"
+                android:textColor="@color/clear_back"
+                android:textStyle="italic|bold" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="@dimen/textview_or_edittext_hight"
+                android:layout_weight="1"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/map" />
+
+                    <TextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/clock" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

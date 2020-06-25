@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:theme="@style/LargeTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/textview_or_edittext_hight_large"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/Reset_Password" />
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:layout_gravity="right|center"
+                android:src="@mipmap/close" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/txtOldPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_marginTop="@dimen/large_space"
+            android:background="@drawable/yellow_border"
+            android:gravity="center"
+            android:hint="@string/Old_Password"
+            android:inputType="numberPassword" />
+
+        <EditText
+            android:id="@+id/txtNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_marginTop="@dimen/large_space"
+            android:background="@drawable/yellow_border"
+            android:gravity="center"
+            android:hint="@string/New_Password"
+            android:inputType="numberPassword" />
+
+        <EditText
+            android:id="@+id/txtConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_marginTop="@dimen/large_space"
+            android:background="@drawable/yellow_border"
+            android:gravity="center"
+            android:hint="@string/Confirm_Password"
+            android:inputType="numberPassword" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_marginTop="@dimen/large_space"
+            android:background="@drawable/login_buttonborder"
+            android:text="@string/Reset" />
+
+    </LinearLayout>
+
+</FrameLayout>

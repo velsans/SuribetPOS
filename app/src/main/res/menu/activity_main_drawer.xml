@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <!-- <item
+             android:id="@+id/profile"
+             android:icon="@mipmap/loginusericon"
+             android:title="System Admin" />-->
+        <item
+            android:id="@+id/home"
+            android:icon="@mipmap/ic_home"
+            android:title="@string/Home_Page"/>
+        <item
+            android:id="@+id/e_Topup"
+            android:icon="@mipmap/etopup"
+            android:title="E-Topup"/>
+        <item
+            android:id="@+id/topup_voucher"
+            android:icon="@mipmap/topup"
+            android:title="TopUp Voucher"/>
+        <item
+            android:id="@+id/online_cashOut"
+            android:icon="@mipmap/money_bag"
+            android:title="Online CashOut "/>
+        <item
+            android:id="@+id/live_betting"
+            android:icon="@mipmap/live_betn"
+            android:title="Live Betting"/>
+        <item
+            android:id="@+id/sport_betting"
+            android:icon="@mipmap/sport_betn"
+            android:title="Sport Betting"/>
+        <item
+            android:id="@+id/dailygame"
+            android:icon="@mipmap/daily_gamen"
+            android:title="Dailygame"/>
+        <item
+            android:id="@+id/looto"
+            android:icon="@mipmap/lotton"
+            android:title="Lotto"/>
+        <item
+            android:id="@+id/sales_commision"
+            android:icon="@mipmap/sales_commision"
+            android:title="Commision"/>
+        <item
+            android:id="@+id/transaction"
+            android:icon="@mipmap/transaction"
+            android:title="Transaction"/>
+        <item
+            android:id="@+id/changepwd"
+            android:icon="@mipmap/changepwd"
+            android:title="Changepassword"/>
+        <!-- <item
+             android:id="@+id/signout"
+             android:icon="@mipmap/signout"
+             android:title="Signout" />-->
+    </group>
+    <!-- <item android:title="Communicate">
+         <menu>
+             <item
+                 android:id="@+id/nav_share"
+                 android:icon="@drawable/ic_menu_share"
+                 android:title="Share" />
+             <item
+                 android:id="@+id/nav_send"
+                 android:icon="@drawable/ic_menu_send"
+                 android:title="Send" />
+         </menu>
+     </item>-->
+</menu>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/freeticketpopup_window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/login_background" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:background="@color/color_black"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="FREE TICKET-PAYMENT"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+
+                    <ImageView
+                        android:id="@+id/hide_freeticketpopup_btn_lotto"
+                        android:layout_width="@dimen/textview_or_edittext_hight"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_gravity="right|center"
+                        android:background="@mipmap/cancelvoucherwhite"
+                        android:padding="5dp" />
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/freeTicketSearchBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/login_buttonborder"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="Search"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/freeTicketSearchBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:ems="10"
+                        android:gravity="left|center"
+                        android:hint="@string/BarCode"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/freeTicketScannerBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:background="@color/color_black"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:src="@mipmap/barcodeicon"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@drawable/black"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/color_lt_UpDown"
+                        android:gravity="right|center"
+                        android:paddingLeft="5dp"
+                        android:text="LOCATION:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_black" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/color_lt_UpDown"
+                        android:gravity="right|center"
+                        android:paddingLeft="5dp"
+                        android:text="SLIP TIME:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_black" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_slipTme"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/color_lt_UpDown"
+                        android:gravity="right|center"
+                        android:paddingLeft="5dp"
+                        android:text="FREE LETTER:"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_black" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_freeletter"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_freeletter2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="left|center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/freeTicket_TotBet"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_MakeTicketBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/login_buttonborder"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="MAKE FREE TICKET"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/freeTicket_Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittextstyle"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="N/A"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/color_whit" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/freeTicket_winningAmt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittextstyle"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="N/A"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_whit" />
+
+                    <TextView
+                        android:id="@+id/freeTicket_PayBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/login_buttonborder"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:text="CLICK TO PAY"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/color_black"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/freeTicket_CancelBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:layout_weight="1"
+                    android:background="@color/clear_back"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:text="CLEAR"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/color_black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

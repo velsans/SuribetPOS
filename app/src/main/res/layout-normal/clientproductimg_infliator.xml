@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/NormalTextViewTheme">
+
+    <FrameLayout
+        android:layout_width="@dimen/textview_or_edittext_width_normal"
+        android:layout_height="@dimen/textview_or_edittext_width_normal"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/client_productitems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/hm_menubtn" />
+    </FrameLayout>
+</LinearLayout>

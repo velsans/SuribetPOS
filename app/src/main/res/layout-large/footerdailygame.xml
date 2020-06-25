@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/replayBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/login_buttonborder"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="Replay"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+            <EditText
+                android:id="@+id/ReplayBarcode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittextstyle"
+                android:ems="10"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@drawable/white" />
+
+            <ImageView
+                android:id="@+id/barcodeScannerBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:background="@color/color_black"
+                android:gravity="center"
+                android:padding="5dp"
+                android:src="@mipmap/barcodeicon"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@drawable/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearFooter1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/primary_heding"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="No of Bets"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+            <EditText
+                android:id="@+id/txtBetCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittextstyle"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@drawable/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/primary_heding"
+                android:gravity="start|fill_vertical"
+                android:paddingLeft="5dp"
+                android:text="Stake / bets"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+            <EditText
+                android:id="@+id/txtStack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:layout_weight="1"
+                android:background="@drawable/edittextstyle"
+                android:ems="10"
+                android:gravity="right|center"
+                android:hint=""
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@drawable/white"
+                android:textColorHint="@color/color_whit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearFooter1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/login_buttonborder"
+                android:gravity="center"
+                android:text="Pay"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_whit" />
+
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/clear_back"
+                android:gravity="center"
+                android:text="@string/Cancel"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_whit" />
+            <!--</com.andexert.library.RippleView>-->
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

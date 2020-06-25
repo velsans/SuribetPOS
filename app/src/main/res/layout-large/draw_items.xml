@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/childlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_heding"
+        android:clickable="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/draw_items_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="35sp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/clock"/>
+
+        <TextView
+            android:id="@+id/childItem"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/draw_items_txt"
+            android:gravity="left|center"
+            android:text="Draw Time"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_whit"
+            android:textSize="14sp"/>
+    </LinearLayout>
+</LinearLayout>

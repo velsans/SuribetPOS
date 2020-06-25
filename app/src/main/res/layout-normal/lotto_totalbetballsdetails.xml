@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/betball_hight_large"
+        android:layout_weight="3"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/betball_hight_large"
+        android:layout_gravity="top|center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/lotto_betballdrawIDS"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="734-1st"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold" />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.suribetpos.main.utilities.HorizontalListView
+                android:id="@+id/betnumbers_list_images"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="3dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/lotto_betballdrawIDSlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/textview_or_edittext_hight_normal">
+
+            <ImageView
+                android:id="@+id/lotto_betballclose"
+                android:layout_width="@dimen/textview_or_edittext_hight_normal"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_delete_forever_white_24dp"
+                android:visibility="visible" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

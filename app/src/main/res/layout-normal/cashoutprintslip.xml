@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_black_box"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/details_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Details"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/rectangle_black_box"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/PAID_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_black_box"
+            android:gravity="center"
+            android:text="PAID"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/WDR_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="WDR"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_black_box"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_black_box"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/LocationName_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="Location Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/TillName_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="TillName"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/CashierName_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="CashierName"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/PaymentDateTime_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="PaymentDateTime"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.3"
+            android:background="@drawable/rectangle_black_box"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/AMOUNT_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="AMOUNT"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Currency_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="Currency"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Amount_txt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_black_box"
+                android:gravity="center"
+                android:text="Amount"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/rectangle_black_box"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/invalid_message_txt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="There are invalid characters in the text"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/rectangle_black_box"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:src="@mipmap/ic_delete_forever_white_24dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/rectangle_black_box"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/attach_receipt_txt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Attach this receipt to the coupon! Bevestig deze bon aan de coupon! "
+            android:textSize="18sp" />
+    </LinearLayout>
+</LinearLayout>

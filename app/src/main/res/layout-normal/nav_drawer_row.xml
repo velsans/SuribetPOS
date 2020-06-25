@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:clickable="true">
+
+    <com.andexert.library.RippleView
+        rv_centered="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@drawable/navigation_itemclick"
+            android:gravity="left|center"
+            android:padding="5dp"
+            android:text="hello"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"/>
+    </com.andexert.library.RippleView>
+</FrameLayout>

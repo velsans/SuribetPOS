@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/LargeTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/retailerScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <!--Result View-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/primary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fromdateTodate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:gravity="left|center"
+                android:paddingLeft="10dp"
+                android:text="@string/Date"
+                android:textColor="@color/edittext_hint"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:background="@color/sample_blue"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/textview_or_edittext_width_barcode"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Date"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/textview_or_edittext_width_xlarge"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/AccountID"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/textview_or_edittext_width_xlarge"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Amount"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:layout_width="@dimen/textview_or_edittext_width_barcode"
+                    android:layout_height="match_parent">
+
+                    <SearchView
+                        android:id="@+id/barcode_searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:iconifiedByDefault="true" />
+
+                    <TextView
+                        android:id="@+id/BarcodeHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:hint="@string/BarCode"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="@dimen/textview_or_edittext_width_normal"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Status"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="@dimen/textview_or_edittext_width_normal"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/Receipt"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="82dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/primary"
+                    android:orientation="horizontal">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/activity_main_swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/etopup_todays_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/theme_background"></androidx.recyclerview.widget.RecyclerView>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <TextView
+                        android:id="@+id/etopup_todays_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/APINotResponding"
+                        android:textColor="@color/color_whit"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/primary_heding"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="right"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/Total_Transaction_Count" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/etopup_todays_count"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textColor="@color/color_whit" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="right"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:text="@string/Total_Transaction_Amount" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/etopup_todays_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textColor="@color/color_whit" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="@color/login_background" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="right"
+            android:background="@color/login_background" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pdfviewerLAYOUT"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone">
+
+        <include layout="@layout/pdf_file_create" />
+    </LinearLayout>
+
+
+</FrameLayout>

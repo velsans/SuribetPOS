@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:theme="@style/NormalTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:id="@+id/etopup_todays_background"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_normal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/etopup_todays_vouchertime"
+            android:layout_width="@dimen/textview_or_edittext_width_xxxlarge"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Date" />
+
+        <TextView
+            android:id="@+id/etopup_todays_accountid"
+            android:layout_width="@dimen/textview_or_edittext_width_large"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/AccountID" />
+
+        <TextView
+            android:id="@+id/etopup_todays_amount"
+            android:layout_width="@dimen/textview_or_edittext_width_large"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Amount"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/etopup_todays_barcode"
+            android:layout_width="@dimen/textview_or_edittext_width_xxxlarge"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/BarCode"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:layout_width="@dimen/textview_or_edittext_width_normal"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/etopup_todays_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@mipmap/close" />
+
+            <TextView
+                android:id="@+id/etopup_todays_cancelStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:text="@string/Status" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/etopup_todays_recipt"
+            android:layout_width="@dimen/textview_or_edittext_width_normal"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@mipmap/pdf" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <FrameLayout
+        android:id="@+id/BetNumberframelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_black"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/betnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/color_whit"
+                    android:gravity="center"
+                    android:text="31"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_black"
+                    android:textSize="80sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="Stake :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/stack"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="5"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SRD"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="Multiplier :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/multiplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="28"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="X"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right|center"
+                        android:text="Exp.Winning :"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/exp_winning"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="140000"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="SRD"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_black"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:background="@color/login_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=" Daily Game Payment"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffff" />
+
+                <ImageView
+                    android:id="@+id/hide_popup_button"
+                    android:layout_width="@dimen/textview_or_edittext_hight"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/cancelvoucherwhite" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--    <ImageView
+                android:id="@+id/imagge"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="top"
+                android:layout_weight="1"
+                android:src="@drawable/ic_profile"
+                android:visibility="invisible"/>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/textview_or_edittext_hight_large"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:width="260dp"
+                android:text="Number of bet(s)"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/txtNumberOfVouchers"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:gravity="right|center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#d3d3d3"
+                android:visibility="gone">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="Stake/Bet"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txtTotalAmount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:gravity="right|center"
+                android:inputType="number|textPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#d3d3d3"
+                android:textColorHint="#808080"
+                android:visibility="gone"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="Total stake"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+
+            <TextView
+                android:id="@+id/txtTotalStake"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:gravity="right|center"
+                android:inputType="number|textPassword"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#d3d3d3"
+                android:textColorHint="#808080"></TextView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/Received_amount"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+
+            <EditText
+                android:id="@+id/txtReceivedAmount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittextstyle"
+                android:gravity="right|center"
+                android:inputType="numberDecimal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/Return_amount"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+
+
+            <TextView
+                android:id="@+id/txtReturnAmount"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="#000000"
+                android:gravity="right|center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#d3d3d3"></TextView>
+
+
+            <!-- <com.andexert.library.RippleView
+                 android:id="@+id/btnPays"
+                 rv_centered="true"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="20dp"
+                 android:layout_weight="1"
+                 >-->
+
+            <TextView
+                android:id="@+id/btnPays"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/login_buttonborder"
+                android:gravity="center"
+                android:text="Pay"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit" />
+            <!--</com.andexert.library.RippleView>-->
+
+            <ImageView
+                android:id="@+id/printer_listsIcon"
+                android:layout_width="@dimen/textview_or_edittext_hight"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="@dimen/textview_or_edittext_hight_large"
+                android:clickable="true"
+                android:src="@mipmap/printer" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ratecalu_empty_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="No Value Found!"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/balancehead">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="FROM"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_whit"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="RATE"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_whit"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TO"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/color_whit"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/activity_main_swipe_refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/ratecalcu_fromlistvew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></ListView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ratecalculator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/ratecalufooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"></include>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/rateCalculatorIMG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/textview_or_edittext_hight_large"
+        android:layout_marginRight="@dimen/textview_or_edittext_hight_large"
+        android:src="@mipmap/ratecalculator" />
+    <LinearLayout
+        android:id="@+id/progressbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/progressbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></include>
+    </LinearLayout>
+
+
+
+</FrameLayout>

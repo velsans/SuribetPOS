@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_sandyBrown"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/clear_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/material_animations_accent"
+            android:gravity="center"
+            android:text="Currency"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/exe_currencyEd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_whit"
+            android:focusable="false"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/clear_back"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/material_animations_accent"
+            android:gravity="center"
+            android:text="Rate"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/exe_rateEd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/color_whit"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/clear_back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        >
+
+        <RadioGroup
+            android:id="@+id/exe_radiobtngruop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_refer_Usd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Reference to USD"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"/>
+
+            <RadioButton
+                android:id="@+id/radio_refer_forgin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Reference to Forgine Currency"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exe_update"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:background="@color/clear_back"
+        android:text="Update"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+</LinearLayout>

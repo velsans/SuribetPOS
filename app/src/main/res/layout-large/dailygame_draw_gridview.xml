@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/primary"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/drawdetails_number"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="10dp"
+            android:background="@mipmap/betball"
+            android:focusable="false"
+            android:gravity="center"
+            android:inputType="number|phone"
+            android:text="20"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/drawdetails_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="02/09/1988 "
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/theme_border"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/drawdetails_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number|phone"
+            android:text="300.00"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/drawdetails_draw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="11"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/drawdetails_video"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/video"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+

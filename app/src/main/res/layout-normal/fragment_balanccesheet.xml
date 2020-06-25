@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/balancehead"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/AccountID"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Received"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Paid"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Net"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/activity_main_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/balancesheet_listvew"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/balancesheet_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center"
+        android:gravity="center"
+        android:text="No Value Found!"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_denomination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/textview_or_edittext_hight_large"
+        android:src="@mipmap/ic_add_white_24dp"
+        />
+
+    <!--Denomination-->
+    <LinearLayout
+        android:id="@+id/denomination_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/betball_hight_large"
+        android:background="@drawable/green_border"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_gravity="top"
+            android:layout_marginTop="4dp"
+            android:background="@color/CancelbetColor">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Denomination"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/denomination_close"
+                android:layout_width="@dimen/textview_or_edittext_hight_large"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_close_red_1024dp"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/CancelbetColor"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="DENOM"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="QTY"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TOTAL"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/denomination_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:text="No Value Found!"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ListView
+            android:id="@+id/denomination_listvew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <!--Currency List-->
+    <LinearLayout
+        android:id="@+id/currency_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/betball_hight_large"
+        android:background="@drawable/blue_border"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_gravity="top"
+            android:layout_marginTop="4dp"
+            android:background="@color/material_animations_primary_dark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Currency"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            <ImageView
+                android:id="@+id/currency_close"
+                android:layout_width="@dimen/textview_or_edittext_hight_large"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_close_red_1024dp"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/currency_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:text="No Value Found!"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ListView
+            android:id="@+id/currency_listvew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            />
+    </LinearLayout>
+    <!--Total List-->
+    <LinearLayout
+        android:id="@+id/total_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/textview_or_edittext_hight_large"
+        android:background="@drawable/sandy_border"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_gravity="top"
+            android:layout_marginTop="4dp"
+            android:background="@color/color_sandyBrown">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left|center"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Total"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"/>
+
+
+            <ImageView
+                android:id="@+id/total_close"
+                android:layout_width="@dimen/textview_or_edittext_hight_large"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:layout_gravity="right"
+                android:src="@mipmap/ic_close_red_1024dp"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/color_sandyBrown"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CURRENCY"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TOTAL"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="TOTAL(USD)"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/total_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center"
+            android:gravity="center"
+            android:text="No Value Found!"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <ListView
+            android:id="@+id/total_listvew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/progressbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></include>
+    </LinearLayout>
+</FrameLayout>

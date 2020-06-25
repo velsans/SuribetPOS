@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:theme="@style/PDF_LargeTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:id="@+id/BaseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@color/color_whit"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/pdf_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="WWW.SURIBET.IN.SR" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/color_black" />
+
+        <ImageView
+            android:id="@+id/pdf_logo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:src="@mipmap/logo" />
+
+        <TextView
+            android:id="@+id/pdf_clientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="YsecITTEST" />
+
+        <TextView
+            android:id="@+id/pdf_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:text="Paramaribo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/color_black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Voucher #"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdf_voudher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1123456789" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Till"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdf_till"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Cashier : "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdf_cashier"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:text="Mob POS Test"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight"
+            android:background="@drawable/retangular_box">
+
+            <TextView
+                android:id="@+id/pdf_Amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="#DFDCDF"
+                android:gravity="center"
+                android:text="SRD 10/-"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pdf_PINValue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight"
+            android:layout_marginTop="10dp"
+            android:background="#DFDCDF"
+            android:gravity="center"
+            android:text="PIN # 1234-1234-1234"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/barcode_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:src="@mipmap/topup" />
+
+        <TextView
+            android:id="@+id/barcode_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="13489900987778484"
+             />
+
+        <TextView
+            android:id="@+id/pdf_bottomMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="HOW TO TOPUP YOUR ACCOUNT:"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/retangular_box"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/pdf_bottomRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Topup Vocher Sales subject to ters ad coditions bySURIBET.Slip expires after 90 days.Note:It is NOT possible to cash out a Top Up amount/Voucher"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:text="CUSTOMER SERVICE NUMBER - "
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pdf_customerServiceNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1234567890"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/pdf_bottomDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="4dp"
+                android:text="04-Apr-2020 08:34"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/pdf_prinoutClose"
+        android:layout_width="@dimen/textview_or_edittext_hight"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="top|right"
+        android:layout_marginBottom="@dimen/textview_or_edittext_hight"
+        android:src="@mipmap/close" />
+
+    <ImageView
+        android:id="@+id/pdf_prinout"
+        android:layout_width="@dimen/textview_or_edittext_hight"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/textview_or_edittext_hight"
+        android:src="@mipmap/save" />
+</FrameLayout>

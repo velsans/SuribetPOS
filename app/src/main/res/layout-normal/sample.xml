@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="154dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_heding"
+                android:gravity="center"
+                android:text="UpComing Draw"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/login_background" />
+
+            <ExpandableListView
+                android:id="@+id/draw_dateslist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:descendantFocusability="blocksDescendants"
+                android:divider="@color/color_black"
+                android:dividerHeight="0.5dp"
+                android:groupIndicator="@color/clear_back"
+                android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
+                android:listSelector="@drawable/selector_list_item" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_heding"
+                android:gravity="center"
+                android:text="Betting Slip"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/color_whit"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/login_background" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ListView
+                    android:id="@+id/listViewBetDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/primary_heding"
+                    android:dividerHeight="0.5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <ImageView
+                    android:id="@+id/bet_please"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/no_morebet" />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footerdailygame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="20dp"
+        android:visibility="gone">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/btnNumbers"
+            android:layout_width="@dimen/textview_or_edittext_hight_large"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"
+            app:srcCompat="@mipmap/betnumberbtn" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/betnumbers_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+</FrameLayout>

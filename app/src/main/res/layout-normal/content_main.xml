@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:showIn="@layout/app_bar_main">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/footer"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/textview_or_edittext_hight_large">
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/textview_or_edittext_hight_normal"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/map" />
+
+                    <TextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Suriname"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/layout_white" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/textview_or_edittext_hight_normal"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:src="@mipmap/clock" />
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:text="Hello  "
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/layout_white" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- <com.hitomi.cmlibrary.CircleMenu
+             android:id="@+id/circle_menu"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom|center"
+             android:visibility="visible"/>-->
+
+
+        <!-- <com.nightonke.boommenu.BoomMenuButton
+              android:id="@+id/bmb5"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="bottom|center"
+              app:bmb_buttonEnum="simpleCircle"
+              app:bmb_buttonPlaceEnum="buttonPlace_sc_9_1"
+              app:bmb_hideMoveEaseEnum="inCirc"
+              app:bmb_hideRotateEaseEnum="inCirc"
+              app:bmb_hideScaleEaseEnum="inCirc"
+              app:bmb_highlightedColor="@android:color/holo_orange_dark"
+              app:bmb_normalColor="@android:color/holo_orange_light"
+              app:bmb_piecePlaceEnum="piecePlace_dot_9_1"
+              app:bmb_showMoveEaseEnum="inCirc"
+              app:bmb_showRotateEaseEnum="inCirc"
+              app:bmb_showScaleEaseEnum="inCirc"
+              />-->
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/blurtooth_printer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/bluetooh_paireddevices"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/LargeTextViewTheme"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large">
+
+            <TextView
+                android:id="@+id/sold_Btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_animations_accent"
+                android:gravity="center"
+                android:text="@string/sold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Cancelled_Btn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_animations_accentlight"
+                android:gravity="center"
+                android:text="@string/cancelled"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/Login_border"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <TextView
+            android:id="@+id/fromdateTodate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight"
+            android:gravity="left|center"
+            android:paddingLeft="10dp"
+            android:text="@string/Date"
+            android:textColor="@color/edittext_hint"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/soldlistDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                    android:background="@color/red"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <SearchView
+                            android:id="@+id/soldDate_searchView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:iconifiedByDefault="true" />
+
+                        <TextView
+                            android:id="@+id/soldDateHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint="@string/Date"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/BarCode" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Amount" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/activity_main_swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/sales_commissionList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <TextView
+                        android:id="@+id/sales_cancelled_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/APINotResponding"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                            android:background="@color/theme_background"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="@string/total_sold"
+                                android:textColor="@color/red" />
+
+
+                            <TextView
+                                android:id="@+id/txtSoldTotal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/lblAccountNumber"
+                                android:layout_weight="2"
+                                android:background="@color/theme_background"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/green">
+
+                            </TextView>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                            android:background="@color/theme_background"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/tvSalesComission"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="Total sales commission (%)"
+                                android:textColor="@color/red" />
+
+
+                            <TextView
+                                android:id="@+id/txtSalesComission"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@+id/lblAccountNumber"
+                                android:layout_weight="2"
+                                android:background="@color/theme_background"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/green" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                            android:background="@color/theme_background"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="@string/Balance"
+                                android:textColor="@color/red" />
+
+                            <TextView
+                                android:id="@+id/txtBalReturn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:background="@color/theme_background"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/green" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cancelledlistDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                    android:background="@color/red"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <SearchView
+                            android:id="@+id/cancelledDate_searchView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:iconifiedByDefault="true" />
+
+                        <TextView
+                            android:id="@+id/cancelledDateHead"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:hint="@string/Date"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/BarCode" />
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear_back" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Amount" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                        android:id="@+id/cancel_swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/cancel_commissionList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                    <TextView
+                        android:id="@+id/cancel_cancelled_empty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/APINotResponding"
+                        android:textColor="@color/colorAccent"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                            android:background="@color/theme_background"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="@string/cancel_count"
+                                android:textColor="@color/red" />
+
+
+                            <TextView
+                                android:id="@+id/txtCancelCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="@color/green" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                            android:background="@color/theme_background"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center"
+                                android:text="@string/Amount"
+                                android:textColor="@color/red" />
+
+
+                            <TextView
+                                android:id="@+id/txtCancelAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:paddingRight="5dp"
+                                android:text=""
+                                android:textColor="@color/green">
+
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

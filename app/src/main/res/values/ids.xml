@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="auto_focus" type="id"></item>
+    <item name="decode" type="id"></item>
+    <item name="decode_failed" type="id"></item>
+    <item name="decode_succeeded" type="id"></item>
+    <item name="launch_product_query" type="id"></item>
+    <item name="quit" type="id"></item>
+    <item name="restart_preview" type="id"></item>
+    <item name="return_scan_result" type="id"></item>
+    <item name="btnclean" type="id"></item>
+    <item name="textViewAutoNumber" type="id"></item>
+    <item name="btnPrint" type="id"></item>
+    <item name="preview_view" type="id"></item>
+    <item name="viewfinder_view" type="id"></item>
+    <item name="txtResult" type="id"></item>
+    <item name="txtViewDenom" type="id"></item>
+    <item name="visible" type="id"></item>
+    <item name="masked" type="id"></item>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/activity_main_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:layout_gravity="top"
+                android:background="@color/Login_border"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Results"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/login_background" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Winning Details"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_whit"
+                        android:textStyle="bold"></TextView>
+
+                    <ImageView
+                        android:id="@+id/searchbtn_details"
+                        android:layout_width="@dimen/textview_or_edittext_hight"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_gravity="right"
+                        android:background="@color/clear_back"
+                        android:padding="5dp"
+                        android:src="@mipmap/ic_search_white" />
+
+                    <EditText
+                        android:id="@+id/searchview_resultDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_marginRight="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:background="@color/backgroud"
+                        android:gravity="left|center"
+                        android:hint="DrawId-or-Winning Number"
+                        android:inputType="number"
+                        android:padding="5dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/color_whit"
+                        android:textColorHint="@color/color_lt_UpDown"
+                        android:visibility="visible" />
+
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/login_background" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_background" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:orientation="horizontal">
+
+                <ListView
+                    android:id="@+id/resultdate_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/primary_heding" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/login_background" />
+
+
+                <GridView
+                    android:id="@+id/result_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/primary_heding"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp"
+                    android:visibility="visible"></GridView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/login_background" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</FrameLayout>
