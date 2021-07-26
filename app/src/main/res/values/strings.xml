@@ -42,6 +42,7 @@
     <string name="Confirm_Password">Confirm Password</string>
     <string name="Password_successfully_changed">Password successfully changed</string>
     <string name="Login_again_with_this_new_password">Login again with this new password!</string>
+    <string name="Old_password_is_required">Old password is required!</string>
     <string name="New_password_is_required">New password is required!</string>
     <string name="Confirm_password_is_required">Confirm password is required!</string>
     <string name="New_password_and_confirm_password_should_be_same">New password and confirm password should be same!</string>
@@ -92,8 +93,6 @@
     <string name="please_register">Please Register your Device!</string>
     <string name="sold">SOLD</string>
     <string name="time">Time</string>
-    <string name="cancel_count">Cancel count</string>
-    <string name="Cancel_amount">Cancel amount</string>
     <string name="total_sold">Total sold</string>
     <string name="mobile">Mobile</string>
     <string name="Recharge">Recharge</string>
@@ -107,7 +106,8 @@
 
     <string name="LanguageHead">Languages</string>
     <string name="Total_sales_Commission">Total Sales Commission</string>
-    <string name="Create">CREATE</string>
+    <string name="Create">CREATE VOUCHER</string>
+
     <string name="Transaction">TRANSACTION</string>
     <string name="In_the_future">In the future</string>
     <string name="userID_doesnot_exists">UserID does not exists in Main Server</string>
@@ -122,11 +122,86 @@
     <string name="NewVersion">New Version Available</string>
     <string name="pleaseUpdate">Please update to new version to continue use</string>
 
-    <string name="cashout">ONLINE PAYOUT</string>
+    <string name="cashout">Cashout</string>
+    <string name="onlinepayout">Online Payout</string>
     <string name="comments">Comments</string>
     <string name="paid">Paid</string>
+    <string name="value">Value</string>
     <string name="user">User</string>
     <string name="Request_Nr">Request Nr</string>
+    <string name="Request_Nr_lenght">Request Nr must be 12 length</string>
+    <string name="accountDetails">Account Details requird</string>
+    <string name="please_enter_request_number">Please enter request number</string>
+    <string name="Type_your_keyword_here">Type request number</string>
     <string name="Currency">Currency</string>
+    <string name="Online_WDR_Paid">Online WDR Paid</string>
+    <string name="Commssion_sales">Commission Sales</string>
+
+    <string name="Redeemed">Redeemed</string>
+    <string name="From">From </string>
+    <string name="To"> To </string>
+    <string name="collected_amount">Last Collection :</string>
+
+    <string name="BreakUp">Balance</string>
+
+    <string name="openingCredit">Opening Credit</string>
+    <string name="totEtopUpSold">Total E-Top Up Sold</string>
+    <string name="commissionEtopUp">Commission E-Top Up</string>
+
+    <string name="totECashoutPaid">Cashout Paid Commission</string>
+    <string name="commECashout">Commission Cashout</string>
+    <string name="actualCredit_closingBalance">Actual Credit (Closing Balance)</string>
+    <string name="TotalPaidNonCommission">Paid Non Commission</string>
+
+    <string name="Total_Non_Commission">Cashout Non Commission</string>
+    <string name="ID_number">ID Number</string>
+    <string name="ID_name">ID Name</string>
+    <string name="please_enter_Id_number">Please enter ID Number</string>
+    <string name="please_enter_Id_Name">Please enter ID Name</string>
+
+    <string name="card_validation">Card Validation</string>
+    <string name="card_number_barcode">Card number / Barcode</string>
+    <string name="please_enter_card_number_barcode">please enter card number / barcode</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+
+    // Printout Translation
+    <string name="Voucher">Voucher #</string>
+    <string name="Till">Till</string>
+    <string name="Cashier">Cashier :</string>
+
+    <string name="WDR">WDR</string>
+    <string name="PAID">PAID</string>
+    <string name="AMOUNT">AMOUNT</string>
+    <string name="FirstLetter">Password can not start with "0"</string>
+
+    <string name="pt_title">Playable Tickets</string>
+    <string name="pt_sales">Sales</string>
+    <string name="pt_commission">Commission</string>
+
+    <string name="pt_sales_generation">Ticket Generation</string>
+    <string name="pt_sales_transaction">Sales Transaction</string>
+    <string name="todo">TODO</string>
+    <string name="playable_ticket">PLAYABLE TICKET</string>
+    <string name="number_of_tickets">Number of Tickets</string>
+    <string name="no_denomination_found">No Denomination Found</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="cancelled_voucher">CANCELLED VOUCHER</string>
+    <string name="please_select_any_voucher">Please Select any voucher</string>
+
+    <string name="TSC_Conn">Printer Connection…</string>
+    <string name="Printing">printer is connecting please wait"</string>
+    <string name="PrinterHead">Printer Status</string>
+
+    <string name="PrinterHDmsg">please check the printer either connected or not</string>
+    <string name="TopUp">Top Up</string>
+    <string name="Location">Loc</string>
+    <string name="open_barcodes">Open Barcodes</string>
+    <string name="topup_transaction_amount">Topup Transaction</string>
+    <string name="topup_sales_amount">Topup Sales Commission</string>
+    <string name="online_support_number">ONLINE SUPPORT NUMBER</string>
 
 </resources>

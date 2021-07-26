@@ -1,4 +1,4 @@
-package com.suribetpos.main.utils;
+ package com.suribetpos.main.utils;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

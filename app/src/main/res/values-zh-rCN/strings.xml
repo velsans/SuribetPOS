@@ -43,6 +43,7 @@
     <string name="Password_successfully_changed">密码修改成功</string>
     <string name="Login_again_with_this_new_password">使用此新密码再次登录！</string>
     <string name="New_password_is_required">需要新密码！</string>
+    <string name="Old_password_is_required">需要旧密码!</string>
     <string name="Confirm_password_is_required">确认密码为必填项！</string>
     <string name="New_password_and_confirm_password_should_be_same">新密码和确认密码应该相同！</string>
     <string name="cancelled">取消</string>
@@ -92,8 +93,6 @@
     <string name="please_register">"请注册您的设备！ "</string>
     <string name="sold">"已售出 "</string>
     <string name="time">"时间 "</string>
-    <string name="cancel_count">"取消计数"</string>
-    <string name="Cancel_amount">Cancel amount</string>
     <string name="total_sold">"总销售量 "</string>
     <string name="mobile">移动</string>
     <string name="Recharge">充值</string>
@@ -121,10 +120,84 @@
     <string name="NewVersion">新版本可用</string>
     <string name="pleaseUpdate">请更新到新版本以继续使用</string>
 
-    <string name="cashout">在线支付</string>
+    <string name="cashout">电子现金</string>
+    <string name="onlinepayout">网上支付</string>
     <string name="comments">注释</string>
     <string name="paid">已付费</string>
     <string name="user">用户</string>
     <string name="Request_Nr">要求编号</string>
+    <string name="Request_Nr_lenght">该数字必须为12个长度</string>
+    <string name="accountDetails">帐户详细信息要求</string>
+    <string name="please_enter_request_number">请输入申请编号r</string>
     <string name="Currency">货币</string>
+    <string name="Type_your_keyword_here">输入请求编号</string>
+
+    <string name="value">值</string>
+
+    <string name="Online_WDR_Paid">在线WDR支付</string>
+    <string name="Commssion_sales">佣金销售</string>
+
+    <string name="Redeemed">已兑换</string>
+    <string name="From">从 </string>;
+    <string name="To"> 至 </string>
+    <string name="collected_amount">失物招领 :</string>
+
+    <string name="BreakUp">平衡</string>
+    <string name="openingCredit">开业信用</string>
+    <string name="totEtopUpSold">总充值已售</string>
+    <string name="commissionEtopUp">佣金充值</string>
+
+    <string name="totECashoutPaid">电子现金支付委员会</string>
+    <string name="commECashout">佣金电子兑现</string>
+    <string name="actualCredit_closingBalance">实际贷方（期末余额）</string>
+    <string name="TotalPaidNonCommission">付费非佣金</string>
+    <string name="Total_Non_Commission">电子现金非佣金</string>
+    <string name="ID_number">身份证号码</string>
+    <string name="ID_name">身份证名</string>
+    <string name="please_enter_Id_number">请输入身份证号码</string>
+    <string name="please_enter_Id_Name">请输入ID名称</string>
+
+    <string name="card_validation">Card Validation</string>
+    <string name="card_number_barcode">Card number / Barcode</string>
+    <string name="please_enter_card_number_barcode">please enter card number / barcode</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+
+
+    // Printout Translation
+    <string name="Voucher">凭证 #</string>
+    <string name="Till">直到</string>
+    <string name="Cashier">出纳员 :</string>
+
+    <string name="WDR">宽动态</string>
+    <string name="PAID">已付</string>
+    <string name="AMOUNT">量</string>
+    <string name="FirstLetter">密码不能以“ 0”开头</string>
+
+    <string name="pt_title">Playable Tickets</string>
+    <string name="pt_sales">Sales</string>
+    <string name="pt_commission">Dashboard</string>
+
+    <string name="pt_sales_generation">Sales Generation</string>
+    <string name="pt_sales_transaction">Sales Transaction</string>
+    <string name="todo">TODO</string>
+    <string name="playable_ticket">PLAYABLE TICKET</string>
+    <string name="number_of_tickets">Number of Tickets</string>
+    <string name="no_denomination_found">No Denomination Found</string>
+    <string name="please_select_any_voucher">Please Select any voucher</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancelled_voucher">CANCELLED 代金券</string>
+    <string name="TSC_Conn">Printer Connection…</string>
+    <string name="Printing">printer is connecting please wait</string>
+    <string name="PrinterHead">Printer Status</string>
+    <string name="PrinterHDmsg">please check the printer either connected or not</string>
+    <string name="TopUp">Top Up</string>
+    <string name="Location">Loc</string>
+    <string name="open_barcodes">打开条形码</string>
+    <string name="topup_sales_amount">Topup Sales Commission</string>
+    <string name="topup_transaction_amount">Topup Transaction</string>
+    <string name="online_support_number">ONLINE SUPPORT NUMBER</string>
+
 </resources>

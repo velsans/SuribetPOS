@@ -1,4 +1,4 @@
-package com.suribetpos.main.model.commission;
+package com.suribetpos.main.data.model.commission;
 
 import java.util.ArrayList;
 

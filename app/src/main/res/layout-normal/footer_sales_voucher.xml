@@ -30,10 +30,10 @@
             android:hint="Enter Denomination"
             android:inputType="number"
             android:maxLength="6"
-            android:padding="10dp"
+            android:padding="@dimen/padding_large"
             android:singleLine="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@drawable/white"
+            android:textColor="@color/white"
             android:textColorHint="@color/primary_text"
             ></EditText>
 

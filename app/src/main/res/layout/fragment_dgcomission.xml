@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/textview_or_edittext_hight"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight">
+
+            <TextView
+                android:id="@+id/PlacedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_animations_accent"
+                android:gravity="center"
+                android:text="PLACED BETS"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/PaidBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/material_animations_accentlight"
+                android:gravity="center"
+                android:text="PAID SLIPS"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/Login_border"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/login_background" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/Placed_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:background="@color/red"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/BarCode"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Draw #"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Stake"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/time"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/placed_swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="163dp">
+
+                        <ListView
+                            android:id="@+id/Placed_commissionList"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="163dp"></ListView>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:id="@+id/TotPlacedCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/counter_text_color"
+                                android:gravity="center"
+                                android:text="Count : "
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/login_background" />
+
+                            <TextView
+                                android:id="@+id/TotPlacedAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/counter_text_color"
+                                android:gravity="center"
+                                android:text="Amt : "
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="right|center"
+                                android:text="Total placed bets"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/TotPlacedBets"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/greenMid"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:id="@+id/TotPlacedCommission"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="right|center"
+                                android:text="Commission Placed Bets"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/TotPlacedCommissionTot"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/greenMid"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="right|center"
+                                android:text="@string/Balance"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/TotPlacedBalance"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/greenMid"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Paid_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:background="@color/red"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/BarCode"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/Amount"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="X"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Paid"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textview_or_edittext_hight"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/time"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v4.widget.SwipeRefreshLayout
+                        android:id="@+id/paid_swipe_refresh_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="124dp">
+
+                        <ListView
+                            android:id="@+id/paidTicketLists"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="124dp"></ListView>
+                    </android.support.v4.widget.SwipeRefreshLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:id="@+id/paidTotCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/counter_text_color"
+                                android:gravity="center"
+                                android:text="Count : "
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/login_background" />
+
+                            <TextView
+                                android:id="@+id/paidTotAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/counter_text_color"
+                                android:gravity="center"
+                                android:text="Amt : "
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="right|center"
+                                android:text="Total Paid Out"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/paidTotOut"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/greenMid"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight">
+
+                            <TextView
+                                android:id="@+id/paidTotCommission"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="right|center"
+                                android:text="Commissions Paid Out"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/red"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/paidCommissionTot"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/color_black"
+                                android:gravity="center"
+                                android:text=""
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/greenMid"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/login_background" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dgCommis_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/APINotResponding"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/colorAccent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom">
+
+        <include
+            layout="@layout/printer_btnlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/printBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="bottom"
+        android:background="@color/login_background"
+        android:gravity="center"
+        android:text="Print"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:visibility="visible" />
+</FrameLayout>

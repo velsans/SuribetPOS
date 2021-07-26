@@ -3,11 +3,11 @@ package com.suribetpos.main.data.model.etopup;
 import java.util.ArrayList;
 
 public class CommissionModel {
-    int TillId,ClientId,UserId;
-    String MacAddress;
-    ArrayList<SaleCommissionModel> SaleCommission=new ArrayList<>();
-    ArrayList<TotalCommissionModel> TotalCommission=new ArrayList<>();
-    ArrayList<CancelCommissionModel> CancelCommission=new ArrayList<>();
+    int TillId, ClientId, UserId;
+    String MacAddress, CollectedDate;
+    ArrayList<SaleCommissionModel> SaleCommission = new ArrayList<>();
+    ArrayList<TotalCommissionModel> TotalCommission = new ArrayList<>();
+    ArrayList<CancelCommissionModel> CancelCommission = new ArrayList<>();
 
     public ArrayList<SaleCommissionModel> getSaleCommission() {
         return SaleCommission;
@@ -63,5 +63,13 @@ public class CommissionModel {
 
     public void setMacAddress(String macAddress) {
         MacAddress = macAddress;
+    }
+
+    public String getCollectedDate() {
+        return CollectedDate;
+    }
+
+    public void setCollectedDate(String collectedDate) {
+        CollectedDate = collectedDate;
     }
 }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/commission_navigation"
+    app:startDestination="@id/breakupdetailsFragment">
+
+    <fragment
+        android:id="@+id/breakupdetailsFragment"
+        android:name="com.suribetpos.main.ui.commission.fragments.BreakupdetailsFragment"
+        android:label="BreakupdetailsFragment" />
+    <fragment
+        android:id="@+id/cashoutCommissionFragment"
+        android:name="com.suribetpos.main.ui.commission.fragments.CashoutCommissionFragment"
+        android:label="CashoutCommissionFragment" />
+    <fragment
+        android:id="@+id/topupCommissionFragment"
+        android:name="com.suribetpos.main.ui.commission.fragments.TopUpCommissionFragment"
+        android:label="TopUpCommissionFragment" />
+</navigation>

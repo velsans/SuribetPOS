@@ -139,4 +139,5 @@ public class Securityvalidateuser {
     public void setM_Item5(ArrayList<Currenydetails_user> m_Item5) {
         this.m_Item5 = m_Item5;
     }
+
 }

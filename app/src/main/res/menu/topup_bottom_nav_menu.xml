@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/createVoucherFragment"
+        android:icon="@drawable/ticket_icon"
+        android:title="@string/Create" />
+
+    <item
+        android:id="@+id/cancelledVoucherFragment"
+        android:icon="@drawable/ticket_cancel_icon"
+        android:title="@string/cancelled_voucher" />
+
+</menu>

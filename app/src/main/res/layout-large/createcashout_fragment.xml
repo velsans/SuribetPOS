@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.suribetpos.main.ui.cashout.viewmodel.CashoutCreateViewModel" />
+
+        <variable
+            name="handler"
+            type="com.suribetpos.main.ui.cashout.CashoutCreateHandler" />
+
+        <import type="android.text.TextUtils" />
+        <!-- <variable!
+             name="requestModel"
+             type="com.suribetpos.main.ui.cashout.viewmodel.RequestNrModel" />-->
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroud"
+        android:orientation="vertical"
+        android:theme="@style/LargeTextViewTheme">
+        <LinearLayout
+            android:id="@+id/onlinepopUpWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:background="@color/backgroud"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:text="@string/onlinepayout"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/OnlinePayoutLayoutClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|center"
+                    android:gravity="center"
+                    android:padding="1dp"
+                    android:src="@mipmap/cancelvoucherwhite"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_large"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/Request_Nr"
+                            android:textColor="@color/color_whit" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/account_no"
+                            android:textColor="@color/color_whit" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/Currency"
+                            android:textColor="@color/color_whit" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="@string/Amount"
+                            android:textColor="@color/color_whit" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="@string/ID_number"
+                            android:textColor="@color/color_whit"
+                            android:visibility="@{viewModel.IDVisible ? View.VISIBLE : View.GONE}" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="@string/ID_name"
+                            android:textColor="@color/color_whit"
+                            android:visibility="@{viewModel.IDVisible ? View.VISIBLE : View.GONE}" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/color_black"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/btnScanAccountNumber"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="4"
+                                    android:background="@color/primary"
+                                    android:gravity="center"
+                                    android:padding="3dp"
+                                    android:src="@mipmap/barcodeicon"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:visibility="gone" />
+
+                                <EditText
+                                    android:id="@+id/cashout_requstNR"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/transparent"
+                                    android:gravity="left|center"
+                                    android:hint="@string/Request_Nr"
+                                    android:inputType="number"
+                                    android:maxLength="12"
+                                    android:padding="5dp"
+                                    android:text="@={viewModel.WDRCode}"
+                                    android:textColor="@color/color_whit"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/cashout_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="4"
+                                android:gravity="center"
+                                android:onClick="@{()-> viewModel.onRequestWDRDetails()}"
+                                android:padding="3dp"
+                                android:src="@mipmap/searchball"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cashout_account"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextstyle"
+                            android:gravity="left|center"
+                            android:paddingLeft="5dp"
+                            android:text="@={viewModel.AccountID}"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/color_whit" />
+
+                        <TextView
+                            android:id="@+id/cashout_currency"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextstyle"
+                            android:gravity="left|center"
+                            android:paddingLeft="5dp"
+                            android:text="@={viewModel.CurrencyCode}"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@color/color_whit" />
+
+                        <TextView
+                            android:id="@+id/cashout_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/edittextstyle"
+                            android:gravity="left|center"
+                            android:paddingLeft="5dp"
+                            android:text="@={viewModel.Amount}"
+                            android:textColor="@color/color_whit" />
+                        <EditText
+                            android:id="@+id/cashout_idnumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edittextstyle"
+                            android:gravity="left|center"
+                            android:paddingLeft="2dp"
+                            android:text="@={viewModel.IDNumber}"
+                            android:visibility="@{viewModel.IDVisible ? View.VISIBLE : View.GONE}"
+                            android:textColor="@color/color_whit" />
+
+                        <EditText
+                            android:id="@+id/cashout_idname"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textview_or_edittext_hight"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/edittextstyle"
+                            android:gravity="left|center"
+                            android:paddingLeft="2dp"
+                            android:text="@={viewModel.IDName}"
+                            android:visibility="@{viewModel.IDVisible ? View.VISIBLE : View.GONE}"
+                            android:textColor="@color/color_whit" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/textview_or_edittext_hight"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/cashout_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@{!TextUtils.isEmpty(viewModel.accountID)==true ? @color/sample_green : @color/edittext_hint}"
+                        android:enabled="@{!TextUtils.isEmpty(viewModel.accountID)}"
+                        android:gravity="center"
+                        android:onClick="@{()-> viewModel.onRequestWDRPay()}"
+                        android:text="@string/Pay"
+                        android:textColor="@color/color_whit"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/cashout_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/red"
+                        android:gravity="center"
+                        android:onClick="@{()->viewModel.onClearRequestTexts()}"
+                        android:text="@string/Cancel"
+                        android:textColor="@color/color_whit"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </FrameLayout>
+</layout>

@@ -1,21 +1,6 @@
 package com.suribetpos.main.ui.view;
 
-import com.suribetpos.R;
-import com.suribetpos.main.data.api.ApiClient;
-import com.suribetpos.main.data.api.ApiInterface;
-import com.suribetpos.main.data.api.ServiceURL;
-import com.suribetpos.main.data.fcm.AutoUpdateHelper;
-import com.suribetpos.main.data.model.common.AppUpdateModel;
-import com.suribetpos.main.data.model.common.ClientInformationModel;
-import com.suribetpos.main.utils.AlertDialogManager;
-import com.suribetpos.main.utils.ConnectionFinder;
-import com.suribetpos.main.data.fcm.CrashAnalytics;
-import com.suribetpos.main.utils.Internet_Connection;
-import com.suribetpos.main.utils.Common;
-import com.suribetpos.main.utils.SuribetException;
-
 import android.Manifest;
-import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -24,33 +9,35 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Base64;
 import android.util.Log;
+import android.view.View;
 import android.view.Window;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
+import com.suribetpos.R;
+import com.suribetpos.main.data.api.ApiClient;
+import com.suribetpos.main.data.api.ApiInterface;
+import com.suribetpos.main.data.fcm.CrashAnalytics;
+import com.suribetpos.main.data.model.common.AppUpdateModel;
+import com.suribetpos.main.data.model.common.ClientInformationModel;
+import com.suribetpos.main.utils.AlertDialogManager;
+import com.suribetpos.main.utils.Common;
+import com.suribetpos.main.utils.ConnectionFinder;
+import com.suribetpos.main.utils.Internet_Connection;
+import com.suribetpos.main.utils.SuribetException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,10 +48,11 @@ import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.READ_PHONE_STATE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class SplashScreenActivity extends BaseActivity {
+public class SplashScreenActivity extends AppCompatActivity {
     private static String IMEINumber;
     AlertDialogManager alert = new AlertDialogManager();
     private static boolean isInternetPresent = false;
+    public static boolean isPrinterFlag = false;
     private static final int PERMISSION_REQUEST_CODE = 200;
     ApiInterface ClientInfoApi = null;
     String VersionName = "", PACKAGE_NAME = "";
@@ -73,6 +61,7 @@ public class SplashScreenActivity extends BaseActivity {
     AlertDialog UpdateApk_alertDialog;
     AppUpdateModel AppUpdateListPojo = new AppUpdateModel();
     ProgressDialog progress_bar;
+    LinearLayout progressbarlayout;
 
     @Override
     protected void onStart() {
@@ -96,6 +85,12 @@ public class SplashScreenActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+        String manufacturerModel = android.os.Build.MANUFACTURER;// + " " + android.os.Build.MODEL;
+        if (manufacturerModel.equals("QUALCOMM")) {
+            isPrinterFlag = true;
+        } else {
+            isPrinterFlag = false;
+        }
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         /* check for Internet status*/
         if (!CheckisInternetPresent()) {
@@ -116,6 +111,8 @@ public class SplashScreenActivity extends BaseActivity {
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+        progressbarlayout = findViewById(R.id.progressbar_layout);
+        progressbarlayout.setVisibility(View.GONE);
     }
 
 
@@ -124,20 +121,24 @@ public class SplashScreenActivity extends BaseActivity {
         @Override
         public void run() {
             try {
-                //Get Device IMEI Number for Mac Address Feild
+                //Get Device IMEI Number for Mac Address field
                 getIMEINumber();
                 if (isNullOrEmpty(IMEINumber)) {
                     alert.ExitshowAlertDialog(SplashScreenActivity.this, CommonMessage(R.string.Mac_Address), CommonMessage(R.string.MacAddressProbMsg), false);
                     return;
                 }
                 Common.MobileMacAddress = IMEINumberToMacAddress(IMEINumber);
-                //Common.MobileMacAddress = "35:82:40:05:11:11:11:0";
+                //Common.MobileMacAddress = "00:15:5D:D5:38:56";
+                //Common.MobileMacAddress = "86:16:34:04:00:89:54:6";//-till id819
+                //"68b434cd9e6b2a84";//"BDF52996-0329-48E0-A4D8-1ABCE3F2FB3F";//"86:30:43:b6:9c:77:ce:04";
+                //Common.MobileMacAddress ="b2:c7:58:b2:a6:e3:ea:e6";// super bet live
                 Common.MacApiStatusDetails.clear();
                 Common.ClientinformtionDetails.clear();
                 Common.ClientProductDetails.clear();
                 Common.ClientCurrency.clear();
 
-                ShowProgressBar(true);
+                //ShowProgressBar(true);
+                progressbarlayout.setVisibility(View.VISIBLE);
                 ClientInfoApi = ApiClient.getApiInterface();
                 Log.v(CommonMessage(R.string.ClientInfoHead), ">>>>>>>" + ClientInfoApi.toString());
                 ClientInfoApi.GetClientInformation(Common.MobileMacAddress).enqueue(new Callback<ClientInformationModel>() {
@@ -145,7 +146,7 @@ public class SplashScreenActivity extends BaseActivity {
                     public void onResponse(Call<ClientInformationModel> call, Response<ClientInformationModel> response) {
                         // try {
                         if (SuribetException.APIException(response.code()) == true) {
-                            if (response.isSuccessful()) {
+                            if (response.body() != null) {
                                 Common.MacApiStatusDetails = response.body().getM_Item1();
                                 //if (isNullOrEmpty(Common.ClientErrorMsg)) {
                                 if (Common.MacApiStatusDetails.get(0).getStatus() == 1) {
@@ -154,7 +155,7 @@ public class SplashScreenActivity extends BaseActivity {
                                     Common.ClientCurrency.addAll(response.body().getM_Item4());
 
                                     Common.ClientId = Common.ClientinformtionDetails.get(0).getClientID();
-                                    Common.ClientName = Common.ClientinformtionDetails.get(0).getClientName().toString();
+                                    Common.ClientName = Common.ClientinformtionDetails.get(0).getClientName();
                                     Common.TillId = Common.ClientinformtionDetails.get(0).getTillId();
                                     Common.LocationId = Common.ClientinformtionDetails.get(0).getLocationId();
                                     Common.LocationTypeId = Common.ClientinformtionDetails.get(0).getLocationTypeId();
@@ -168,7 +169,8 @@ public class SplashScreenActivity extends BaseActivity {
                                     Common.CurrencyID = Common.ClientCurrency.get(0).getCurrencyId();
                                     Common.CurrencyCode = Common.ClientCurrency.get(0).getCurrencyCode();
                                 }
-                                ShowProgressBar(false);
+                                //ShowProgressBar(false);
+                                progressbarlayout.setVisibility(View.GONE);
                                 UserAuthenticationActivity.LanguageFlagLocal = true;
                                 Intent i = new Intent(getBaseContext(), UserAuthenticationActivity.class);
                                 startActivity(i);
@@ -187,7 +189,8 @@ public class SplashScreenActivity extends BaseActivity {
 
                     @Override
                     public void onFailure(Call<ClientInformationModel> call, Throwable t) {
-                        ShowProgressBar(false);
+                        //ShowProgressBar(false);
+                        progressbarlayout.setVisibility(View.GONE);
                         AlertDialogBox(CommonMessage(R.string.ClientInfoHead), t.getMessage(), false);
                     }
                 });
@@ -254,6 +257,7 @@ public class SplashScreenActivity extends BaseActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0) {
@@ -340,5 +344,10 @@ public class SplashScreenActivity extends BaseActivity {
             return null;
         }
     }
+
+    public String CommonMessage(int Common_Msg) {
+        return this.getResources().getString(Common_Msg);
+    }
+
 }
 

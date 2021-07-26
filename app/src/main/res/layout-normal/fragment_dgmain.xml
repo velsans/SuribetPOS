@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:text="Daily Game Update"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@drawable/white" />
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/dailygameupdate"
@@ -121,7 +121,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/padding_large"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
@@ -276,8 +276,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
+                                android:layout_marginLeft="@dimen/padding_large"
+                                android:layout_marginRight="@dimen/padding_large"
                                 android:layout_marginTop="5dp"
                                 android:layout_weight="1"
                                 android:background="@color/colorPrimary"
@@ -293,7 +293,7 @@
                                     android:padding="3dp"
                                     android:src="@mipmap/barcodeicon"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@drawable/black"
+                                    android:textColor="@color/black"
                                     android:textStyle="bold" />
 
                                 <EditText
@@ -322,7 +322,7 @@
                                 android:padding="3dp"
                                 android:src="@mipmap/searchball"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                android:textColor="@drawable/black"
+                                android:textColor="@color/black"
                                 android:textStyle="bold" />
 
 
@@ -574,7 +574,7 @@
                 android:gravity="center"
                 android:text="Result"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@drawable/white" />
+                android:textColor="@color/white" />
         </FrameLayout>
     </LinearLayout>
     <LinearLayout

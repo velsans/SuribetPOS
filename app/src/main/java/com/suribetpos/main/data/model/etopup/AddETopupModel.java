@@ -2,12 +2,13 @@ package com.suribetpos.main.data.model.etopup;
 
 import com.suribetpos.main.data.model.common.StatusModel;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class AddETopupModel {
 
     int UserId,TillId,ClientId;
-    String AccountId,MacAddress,MobileNumber,AlternativeMobileNumber,ClientName;
+    String AccountId,MacAddress,MobileNumber,AlternativeMobileNumber,ClientName,CustomerCardAccountID;
     double TotalPaid;
 
     public int getUserId() {
@@ -89,6 +90,14 @@ public class AddETopupModel {
 
     public void setTable(ArrayList<StatusModel> table) {
         Table = table;
+    }
+
+    public String getCustomerCardAccountID() {
+        return CustomerCardAccountID;
+    }
+
+    public void setCustomerCardAccountID(String customerCardAccountID) {
+        CustomerCardAccountID = customerCardAccountID;
     }
 }
 

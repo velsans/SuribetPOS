@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/clear_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/login_background"
+                android:gravity="left|center"
+                android:paddingLeft="3dp"
+                android:text="Paid"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+            <TextView
+                android:id="@+id/tvPaidData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/Login_border"
+                android:gravity="center|end"
+                android:paddingRight="3dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/login_background"
+                android:gravity="left|center"
+                android:paddingLeft="3dp"
+                android:text="Received"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+            <TextView
+                android:id="@+id/tvRecdData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/Login_border"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text="12"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/login_background"
+                android:gravity="left|center"
+                android:paddingLeft="3dp"
+                android:text="Count"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+            <TextView
+                android:id="@+id/tvCountData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/Login_border"
+                android:gravity="center|end"
+                android:paddingRight="5dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/login_background"
+                android:gravity="left|center"
+                android:paddingLeft="3dp"
+                android:text="@string/Balance"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_weight="1"
+                android:background="@color/Login_border"
+                android:gravity="center|end"
+                android:paddingRight="3dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/encode_view" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_background"
+        android:orientation="horizontal" />
+</LinearLayout>

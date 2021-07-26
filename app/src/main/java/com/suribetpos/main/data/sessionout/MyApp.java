@@ -2,12 +2,7 @@ package com.suribetpos.main.data.sessionout;
 
 import android.app.Application;
 
-import androidx.annotation.NonNull;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
-import com.suribetpos.main.data.fcm.AutoUpdateHelper;
 import com.suribetpos.main.utils.Common;
 
 import java.util.HashMap;
@@ -28,7 +23,7 @@ public class MyApp extends Application {
             public void run() {
                 logOutListener.onSessionLogout();
             }
-        }, Common.SessionLogoutTime); // twenty MINUTE FOR  LOG OUT
+        }, Common.SessionLogoutTime); // twenty MINUTE FOR  LOG OUT // now 15 mints
 
     }
 
@@ -50,18 +45,12 @@ public class MyApp extends Application {
         super.onCreate();
         FirebaseRemoteConfig remoteConfig = FirebaseRemoteConfig.getInstance();
         Map<String, Object> defaultvalues = new HashMap<>();
-        defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_ENABLE, true);
-        defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_VERSIONCODE, "1.5");
-        defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_URL, "http://demo.ysecit.in:8014/EtopUp/V1.1.5/SuribetMobilePOS.apk");
+        //defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_ENABLE, true);
+        //defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_VERSIONCODE, "1.5");
+        //defaultvalues.put(AutoUpdateHelper.KEY_UPDATE_URL, "http://demo.ysecit.in:8014/EtopUp/V1.1.5/SuribetMobilePOS.apk");
 
-        remoteConfig.setDefaults(defaultvalues);
-        remoteConfig.fetch(5)
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        remoteConfig.activateFetched();
-                    }
-                });
+        remoteConfig.setDefaultsAsync(defaultvalues);
+        remoteConfig.fetch(5).addOnCompleteListener(task -> remoteConfig.activate());
     }
     /*    @Override
     protected void attachBaseContext(Context base) {

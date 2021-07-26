@@ -1,12 +1,9 @@
 package com.suribetpos.main.ui.view;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -15,7 +12,9 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.suribetpos.R;
-import com.suribetpos.main.ui.fragments.commissions.ETopUpCommissionFragment;
+import com.suribetpos.main.ui.commission.fragments.CashoutCommissionFragment;
+import com.suribetpos.main.ui.commission.fragments.BreakupdetailsFragment;
+import com.suribetpos.main.ui.commission.fragments.ETopUpCommissionFragment;
 import com.suribetpos.main.utils.AlertDialogManager;
 import com.suribetpos.main.utils.Common;
 
@@ -72,11 +71,15 @@ public class CommissionsActivity extends BaseActivity {
                 ViewPageID = tab.getPosition();
                 if (ViewPageID == 0) {
                     lbm = LocalBroadcastManager.getInstance(CommissionsActivity.this);
-                    Intent i = new Intent("EtopUp_Refresh");
+                    Intent i = new Intent("breakup_refresh");
                     lbm.sendBroadcast(i);
                 } else if (ViewPageID == 1) {
                     lbm = LocalBroadcastManager.getInstance(CommissionsActivity.this);
-                    Intent i = new Intent("TODAYS_REFRESH");
+                    Intent i = new Intent("EtopUp_Refresh");
+                    lbm.sendBroadcast(i);
+                } else if (ViewPageID == 2) {
+                    lbm = LocalBroadcastManager.getInstance(CommissionsActivity.this);
+                    Intent i = new Intent("cashout_refresh");
                     lbm.sendBroadcast(i);
                 } /*else {
                     lbm = LocalBroadcastManager.getInstance(ETopUpActivity.this);
@@ -130,8 +133,9 @@ public class CommissionsActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new ETopUpCommissionFragment(), CommonMessage(R.string.EtopUp));
-        //adapter.addFrag(new TodaysVoucherFragment(), "TRANSACTION");
+        adapter.addFrag(new BreakupdetailsFragment(), CommonMessage(R.string.BreakUp));
+        adapter.addFrag(new ETopUpCommissionFragment(), CommonMessage(R.string.BreakUp));
+        adapter.addFrag(new CashoutCommissionFragment(), CommonMessage(R.string.cashout));
         viewPager.setAdapter(adapter);
     }
 

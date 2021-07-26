@@ -87,7 +87,7 @@
                         android:hint="@string/BarCode"
                         android:padding="5dp"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@drawable/white" />
+                        android:textColor="@color/white" />
 
                     <ImageView
                         android:id="@+id/freeTicketScannerBtn"
@@ -100,7 +100,7 @@
                         android:padding="5dp"
                         android:src="@mipmap/barcodeicon"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@drawable/black"
+                        android:textColor="@color/black"
                         android:textStyle="bold" />
                 </LinearLayout>
 

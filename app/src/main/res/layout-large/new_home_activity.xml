@@ -28,7 +28,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1.1"
                 android:gravity="right|center"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/padding_large"
                 android:text="@string/Select_Language"
                 android:textColor="@color/sample_blue" />
 
@@ -68,9 +68,9 @@
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginLeft="@dimen/padding_large"
+                android:layout_marginTop="@dimen/padding_large"
+                android:layout_marginRight="@dimen/padding_large"
                 android:layout_marginBottom="@dimen/textview_or_edittext_hight_large"
                 android:layout_weight="1"
                 android:scrollbars="vertical" />

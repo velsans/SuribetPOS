@@ -1,4 +1,4 @@
-package com.suribetpos.main.model.commission;
+package com.suribetpos.main.data.model.commission;
 
 /**
  * Created by DEV 27 on 20/02/2017.

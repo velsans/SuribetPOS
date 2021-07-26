@@ -6,15 +6,14 @@ import android.graphics.BitmapFactory;
 import android.util.Base64;
 
 import com.suribetpos.R;
+import com.suribetpos.main.data.fcm.CrashAnalytics;
 import com.suribetpos.main.data.model.common.ClientInformationModel;
 import com.suribetpos.main.data.model.languages.LanguageCodeModel;
 import com.suribetpos.main.data.model.languages.LanguagesListModel;
 import com.suribetpos.main.data.model.topup.Securityvalidateuser;
-import com.suribetpos.main.ui.view.BaseActivity;
 import com.suribetpos.main.ui.view.UserAuthenticationActivity;
 import com.suribetpos.main.utils.AlertDialogManager;
 import com.suribetpos.main.utils.Common;
-import com.suribetpos.main.data.fcm.CrashAnalytics;
 import com.suribetpos.main.utils.SuribetException;
 
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class RetrofitDAO extends BaseActivity {
+public class RetrofitDAO {
     static ApiInterface ClientInfoApi;
     static AlertDialogManager alert = new AlertDialogManager();
     static Context conTEXT;
@@ -46,7 +45,7 @@ public class RetrofitDAO extends BaseActivity {
 
     public void MacAdressVerfication() {
         try {
-            ShowProgressBar(true);
+            //ShowProgressBar(true);
             Common.MacApiStatusDetails.clear();
             Common.ClientinformtionDetails.clear();
             Common.ClientProductDetails.clear();
@@ -56,7 +55,7 @@ public class RetrofitDAO extends BaseActivity {
                 public void onResponse(Call<ClientInformationModel> call, Response<ClientInformationModel> response) {
                     // try {
                     if (SuribetException.APIException(response.code()) == true) {
-                        if (response.isSuccessful()) {
+                        if (response.body() != null) {
                             Common.MacApiStatusDetails = response.body().getM_Item1();
                             //if (isNullOrEmpty(Common.ClientErrorMsg)) {
                             if (Common.MacApiStatusDetails.get(0).getStatus() == 1) {
@@ -85,13 +84,13 @@ public class RetrofitDAO extends BaseActivity {
                     } else {
                         AlertDialogBox(CommonMessages(R.string.ClientInfoHead), response.message(), false);
                     }
-                    ShowProgressBar(false);
+                    //ShowProgressBar(false);
                 }
 
                 @Override
                 public void onFailure(Call<ClientInformationModel> call, Throwable t) {
                     AlertDialogBox(CommonMessages(R.string.ClientInfoHead), t.getMessage(), false);
-                    ShowProgressBar(false);
+                    //ShowProgressBar(false);
                 }
             });
         } catch (Exception ex) {
@@ -119,7 +118,7 @@ public class RetrofitDAO extends BaseActivity {
             @Override
             public void onResponse(Call<Securityvalidateuser> call, Response<Securityvalidateuser> response) {
                 if (SuribetException.APIException(response.code()) == true) {
-                    if (response.isSuccessful()) {
+                    if (response.body() != null) {
                         Common.ApiStatusDetails = response.body().getM_Item1();
                         if (Common.ApiStatusDetails.get(0).getStatus() == 1) {
                             Common.listUserDetails.addAll(response.body().getM_Item2());
@@ -136,13 +135,13 @@ public class RetrofitDAO extends BaseActivity {
                 } else {
                     AlertDialogBox(CommonMessages(R.string.ClientInfoHead), response.message(), false);
                 }
-                ShowProgressBar(false);
+                //ShowProgressBar(false);
             }
 
             @Override
             public void onFailure(Call<Securityvalidateuser> call, Throwable t) {
                 CrashAnalytics.logReportOnly(t.toString());
-                ShowProgressBar(false);
+                //ShowProgressBar(false);
                 AlertDialogBox(CommonMessages(R.string.ClientInfoHead), t.toString(), false);
             }
         });
@@ -152,9 +151,9 @@ public class RetrofitDAO extends BaseActivity {
     public void LanguageList() {
         try {
             Common.Languages = new ArrayList<>();
-            ShowProgressBar(true);
+            //ShowProgressBar(true);
             HashMap<String, Integer> parameters = new HashMap<>();
-            parameters.put("ClientID", Common.ClientId);
+            parameters.put("ClientID", Common.ClientId);// client id hard core for all client (11-sep-2020)
             parameters.put("Plotformid", 3);
             parameters.put("Isdevelopment", 0);
             ClientInfoApi = ApiClient.getApiLanguageInterface();
@@ -162,7 +161,7 @@ public class RetrofitDAO extends BaseActivity {
                 @Override
                 public void onResponse(Call<List<LanguagesListModel>> call, Response<List<LanguagesListModel>> response) {
                     if (SuribetException.APIException(response.code()) == true) {
-                        if (response.isSuccessful()) {
+                        if (response.body() != null) {
                             Common.Languages.addAll(response.body());
                             if (Common.Languages.size() > 0) {
                                 Common.LanguagesStringArray = new String[Common.Languages.size()];
@@ -179,7 +178,7 @@ public class RetrofitDAO extends BaseActivity {
                     } else {
                         AlertDialogBox(CommonMessages(R.string.LanguageHead), response.message(), false);
                     }
-                    ShowProgressBar(false);
+                    //ShowProgressBar(false);
                 }
 
                 @Override
@@ -187,8 +186,7 @@ public class RetrofitDAO extends BaseActivity {
                     CrashAnalytics.logReportOnly(t.toString());
                     AlertDialogBox(CommonMessages(R.string.LanguageHead), t.toString(), false);
                     apiInterFACE.IsResponce(0);
-                    ShowProgressBar(false);
-
+                    //ShowProgressBar(false);
                 }
             });
         } catch (Exception ex) {
@@ -208,7 +206,7 @@ public class RetrofitDAO extends BaseActivity {
             @Override
             public void onResponse(Call<LanguageCodeModel> call, Response<LanguageCodeModel> response) {
                 if (SuribetException.APIException(response.code()) == true) {
-                    if (response.isSuccessful()) {
+                    if (response.body() != null) {
                         Common.LanguageMap = response.body().getM_Item1();
                         apiInterFACE.IsResponce(1);
                     } else {
@@ -238,7 +236,7 @@ public class RetrofitDAO extends BaseActivity {
             @Override
             public void onResponse(Call<LanguageCodeModel> call, Response<LanguageCodeModel> response) {
                 if (SuribetException.APIException(response.code()) == true) {
-                    if (response.isSuccessful()) {
+                    if (response.body() != null) {
                         LanguageMap = response.body().getM_Item1();
                         UserAuthenticationActivity.LanguageErrorCodeMap.put(Language, LanguageMap);
                         Common.LanguageMap = UserAuthenticationActivity.LanguageErrorCodeMap.get(UserAuthenticationActivity.SelectedLanguage);
@@ -280,10 +278,15 @@ public class RetrofitDAO extends BaseActivity {
 
     public static void AlertDialogBox(String Title, String Message, boolean YesNo) {
         if (Common.AlertDialogVisibleFlag == true) {
+            if (AlertDialogManager.alertDialog != null) {
+                AlertDialogManager.alertDialog.dismiss();
+                AlertDialogManager.alertDialog = null;
+            }
             Common.AlertDialogVisibleFlag = false;
             alert.showAlertDialog(conTEXT, Title, Message, YesNo);
         } else {
             //do something here... if already showing
+
         }
     }
 

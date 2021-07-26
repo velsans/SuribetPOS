@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/topup_headtxt"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:layout_gravity="top"
+                android:background="@color/red"
+                android:gravity="center"
+                android:padding="1dp"
+                android:text="@string/cashout"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fromdateTodate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/padding_large"
+                android:text="@string/Date"
+                android:textColor="@color/edittext_hint"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_background" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:background="@color/theme_background"
+                android:clickable="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:background="@color/red"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/Request_Nr"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/time"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear_back" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/Amount"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cashoutCommissionRecylcerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignEnd="@+id/text"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="150dp"
+                android:background="@color/primary_heding" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/payout_cancelled_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/APINotResponding"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/theme_background"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="20-Mar-2015"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@color/clear_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/Login_border"
+                    android:gravity="center"
+                    android:text="@string/Count"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_black" />
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"
+                    android:background="@color/clear_back" />
+
+                <TextView
+                    android:id="@+id/txtTotalPayoutCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lblAccountNumber"
+                    android:layout_weight="1"
+                    android:background="@color/Login_border"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="Amt : "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_black">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/Online_WDR_Paid"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/red" />
+
+
+                <TextView
+                    android:id="@+id/txtPayout_Paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lblAccountNumber"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/TotalPaidNonCommission"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/red" />
+
+
+                <TextView
+                    android:id="@+id/txtTotalPaidNonCommission"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lblAccountNumber"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtPayoutComissionPercentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/Commssion_sales"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/red" />
+
+
+                <TextView
+                    android:id="@+id/txtPayoutCommSales"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lblAccountNumber"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:text="@string/Balance"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/red" />
+
+
+                <TextView
+                    android:id="@+id/txtPayoutBalReturn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/lblAccountNumber"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:gravity="end|right"
+                android:text="20-Mar-2015 07:13PM"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone"
+
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_weight="1"
+                android:background="@color/color_whit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight"
+                android:layout_gravity="right|bottom"
+                android:background="@color/primary_heding"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_buttonborder"
+                    android:gravity="center"
+                    android:text="Save"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@mipmap/button_small"
+                    android:gravity="center"
+                    android:text="Print"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit"
+                    android:visibility="gone" />
+
+
+                <Button
+                    android:id="@+id/btnPrint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_buttonborder"
+                    android:gravity="center"
+                    android:text="Print"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_whit"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>
+
+
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topup_navigation"
+    app:startDestination="@id/createVoucherFragment">
+
+    <fragment
+        android:id="@+id/createVoucherFragment"
+        android:name="com.suribetpos.main.ui.topup.fragments.CreateVoucherFragment"
+        android:label="@string/Create"
+        tools:layout="@layout/create_voucher_fragment" >
+        <action
+            android:id="@+id/action_createVoucherFragment_to_cancelledVoucherFragment"
+            app:destination="@id/cancelledVoucherFragment" />
+        <action
+            android:id="@+id/action_createVoucherFragment_to_denominationBottomFragment"
+            app:destination="@id/denominationBottomFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelledVoucherFragment"
+        android:name="com.suribetpos.main.ui.topup.fragments.CancelledVoucherFragment"
+        android:label="@string/cancelled_voucher"
+        tools:layout="@layout/cancelled_voucher_fragment" >
+        <action
+            android:id="@+id/action_cancelledVoucherFragment_to_createVoucherFragment"
+            app:destination="@id/createVoucherFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/denominationBottomFragment"
+        android:name="com.suribetpos.main.ui.denomination.DenominationBottomFragment"
+        android:label="DenominationBottomFragment" >
+        <action
+            android:id="@+id/action_denominationBottomFragment_to_createVoucherFragment"
+            app:destination="@id/createVoucherFragment" />
+    </dialog>
+</navigation>

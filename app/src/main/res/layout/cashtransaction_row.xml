@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+        <variable
+            name="transactiondetails"
+            type="com.suribetpos.main.data.model.cashout.TransactionDetails" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/theme_background"
+            android:orientation="horizontal"
+            android:theme="@style/NormalTextViewTheme">
+            <ImageView
+                android:id="@+id/etopup_todays_recipt"
+                android:layout_width="@dimen/textview_or_edittext_width_normal"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@mipmap/pdf" />
+            <TextView
+                android:id="@+id/cashouttrans_comments"
+                android:layout_width="@dimen/printingminsize"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{transactiondetails.COMMENT}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/color_whit" />
+
+
+            <TextView
+                android:id="@+id/cashouttrans_paid"
+                android:layout_width="@dimen/textview_or_edittext_width_barcode"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{String.valueOf(transactiondetails.VALUE)}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/color_whit" />
+
+
+            <TextView
+                android:id="@+id/cashouttrans_user"
+                android:layout_width="@dimen/textview_or_edittext_width_barcode"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{transactiondetails.USER}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/color_whit" />
+
+
+            <TextView
+                android:id="@+id/cashouttrans_time"
+                android:layout_width="@dimen/textview_or_edittext_width_barcode"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@{transactiondetails.TIME}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/color_whit" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -2,14 +2,19 @@ package com.suribetpos.main.data.fcm;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.text.TextUtils;
 
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+import com.suribetpos.main.data.api.ServiceURL;
 
 public class AutoUpdateHelper {
-    public static String KEY_UPDATE_ENABLE = "isInstalled";
-    public static String KEY_UPDATE_VERSIONCODE = "VersionCode";
-    public static String KEY_UPDATE_URL = "AppUrl";
+    public static String LIVE_UPDATE_ENABLE = "isInstalled";
+    public static String LIVE_UPDATE_VERSIONCODE = "VersionCode";
+    public static String LIVE_UPDATE_URL = "AppUrl";
+
+    public static String LOCAL_UPDATE_ENABLE = "Local_Installed";
+    public static String LOCAL_UPDATE_VERSIONCODE = "Local_VC";
+    public static String LOCAL_UPDATE_URL = "Local_Url";
+
     public static String appUrl;
 
     public interface OnUpdateCheckListener {
@@ -29,17 +34,27 @@ public class AutoUpdateHelper {
     }
 
     public void check() {
+        double currentVersion = 0.0, appVersion = 0.0;
         FirebaseRemoteConfig remoteconfig = FirebaseRemoteConfig.getInstance();
-        if (remoteconfig.getBoolean(KEY_UPDATE_ENABLE)) {
-            double currentVersion = remoteconfig.getDouble(KEY_UPDATE_VERSIONCODE);
-            double appVersion = ScanValueCheckDouble(getAppVersion(context));
-            double appVersionCode = getAppVersionCode(context);
-            appUrl = remoteconfig.getString(KEY_UPDATE_URL);
-            if (currentVersion > appVersion && onUpdateCheckListener != null) {
-                //if (!TextUtils.equals(currentVersion, appVersion) && onUpdateCheckListener != null) {
-                onUpdateCheckListener.onUpdateCheckListener(appUrl);
+        if (ServiceURL.Local_live_Flag == true) {
+            if (remoteconfig.getBoolean(LIVE_UPDATE_ENABLE)) {
+                currentVersion = remoteconfig.getDouble(LIVE_UPDATE_VERSIONCODE);
+                appVersion = ScanValueCheckDouble(getAppVersion(context));
+                appUrl = remoteconfig.getString(LIVE_UPDATE_URL);
+            }
+        } else {
+            if (remoteconfig.getBoolean(LOCAL_UPDATE_ENABLE)) {
+                currentVersion = remoteconfig.getDouble(LOCAL_UPDATE_VERSIONCODE);
+                appVersion = ScanValueCheckDouble(getAppVersion(context));
+                appUrl = remoteconfig.getString(LOCAL_UPDATE_URL);
             }
         }
+        double appVersionCode = getAppVersionCode(context);
+        if (currentVersion > appVersion && onUpdateCheckListener != null) {
+            //if (!TextUtils.equals(currentVersion, appVersion) && onUpdateCheckListener != null) {
+            onUpdateCheckListener.onUpdateCheckListener(appUrl);
+        }
+
     }
 
     public double ScanValueCheckDouble(String Str) {

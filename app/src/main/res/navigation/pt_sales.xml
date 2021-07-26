@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pt_sales"
+    app:startDestination="@id/pt_Sales_GenrateFragment">
+
+    <fragment
+        android:id="@+id/pt_Sales_GenrateFragment"
+        android:name="com.suribetpos.main.ui.playabletickets.fragments.Pt_Sales_GenrateFragment"
+        android:label="Sales Generation"
+        tools:layout="@layout/pt_sales_generation_fragment" />
+    <fragment
+        android:id="@+id/pt_Sales_TransactionFragment"
+        android:name="com.suribetpos.main.ui.playabletickets.fragments.Pt_Sales_TransactionFragment"
+        android:label="Sales Transaction"
+        tools:layout="@layout/pt_sales_transaction_fragment" />
+</navigation>

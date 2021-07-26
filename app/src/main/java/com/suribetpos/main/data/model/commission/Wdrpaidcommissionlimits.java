@@ -1,8 +1,5 @@
 package com.suribetpos.main.data.model.commission;
 
-import com.suribetpos.main.data.model.commission.Wdrpaidcommissiondetails;
-import com.suribetpos.main.data.model.commission.Wdrpaidcommissionvalues;
-
 import java.util.ArrayList;
 
 /**
@@ -34,12 +31,12 @@ public class Wdrpaidcommissionlimits {
         ErrorMessage = errorMessage;
     }
 
-    public ArrayList<Wdrpaidcommissionvalues> getObjWDRPaidCommissionValues() {
-        return objWDRPaidCommissionValues;
+    public ArrayList<CashoutCommissionDetails> getObjCashoutCommissionDetails() {
+        return objCashoutCommissionDetails;
     }
 
-    public void setObjWDRPaidCommissionValues(ArrayList<Wdrpaidcommissionvalues> objWDRPaidCommissionValues) {
-        this.objWDRPaidCommissionValues = objWDRPaidCommissionValues;
+    public void setObjCashoutCommissionDetails(ArrayList<CashoutCommissionDetails> objCashoutCommissionDetails) {
+        this.objCashoutCommissionDetails = objCashoutCommissionDetails;
     }
 
     public ArrayList<Wdrpaidcommissiondetails> getObjWDRPaidCommissionDetails() {
@@ -52,6 +49,6 @@ public class Wdrpaidcommissionlimits {
 
     int TillID;
     String MacAddress,ErrorMessage;
-    ArrayList<Wdrpaidcommissionvalues> objWDRPaidCommissionValues;
+    ArrayList<CashoutCommissionDetails> objCashoutCommissionDetails;
     ArrayList<Wdrpaidcommissiondetails> objWDRPaidCommissionDetails;
 }

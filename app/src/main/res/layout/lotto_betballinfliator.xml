@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:background="@color/transparent"
+             android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/lotto_betnumbertxt"
+        android:layout_width="@dimen/betball_hight_large"
+        android:layout_height="@dimen/betball_hight_large"
+        android:layout_gravity="center"
+        android:background="@mipmap/lottoball"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:maxLength="2"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/color_black"
+        android:textStyle="bold"
+        />
+
+    <FrameLayout
+        android:id="@+id/betball_replacement"
+        android:layout_width="@dimen/betball_hight_large"
+        android:layout_height="@dimen/betball_hight_large"
+        android:background="@color/transparent"
+        android:gravity="center"></FrameLayout>
+</FrameLayout>

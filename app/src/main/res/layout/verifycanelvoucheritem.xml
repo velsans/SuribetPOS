@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="verifyCanceVocuherResponceModel"
+            type="com.suribetpos.main.ui.topup.model.VerifyCanceVocuherResponceModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:background="@color/color_lt_UpDown"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@{verifyCanceVocuherResponceModel.barcode}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@{verifyCanceVocuherResponceModel.currencyCode}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_black"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@{String.valueOf(verifyCanceVocuherResponceModel.currencyAmount)}"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/color_black"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cancel_verifybtn"
+            android:layout_width="@dimen/textview_or_edittext_hight_large"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:src="@mipmap/cancelvoucher"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/color_whit" />
+
+    </LinearLayout>
+</layout>

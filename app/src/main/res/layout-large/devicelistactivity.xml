@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="No Paired Device! Please add Printer in Mobile!"
-                android:textColor="@drawable/black" />
+                android:textColor="@color/black" />
         </FrameLayout>
 
         <FrameLayout
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="No Paired Device! Please add Printer in Mobile!"
-                android:textColor="@drawable/black" />
+                android:textColor="@color/black" />
         </FrameLayout>
     </LinearLayout>
 

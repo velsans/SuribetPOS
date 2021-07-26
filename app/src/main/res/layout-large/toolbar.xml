@@ -21,8 +21,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1.1"
             android:gravity="left|center"
-            android:paddingLeft="10dp"
+            android:paddingLeft="@dimen/padding_large"
             android:text="@string/Home_Page"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
         <TextView
@@ -30,8 +31,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1.22"
             android:gravity="right|center"
-            android:paddingLeft="10dp"
+            android:paddingLeft="@dimen/padding_large"
             android:text="@string/Amount"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
         <TextView
@@ -40,8 +42,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="left|center"
-            android:paddingLeft="10dp"
+            android:paddingLeft="@dimen/padding_large"
             android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -55,7 +58,7 @@
                 android:id="@+id/toolbar_home"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
+                android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@mipmap/sync" />
 
@@ -63,7 +66,7 @@
                 android:id="@+id/toolbar_switch"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
+                android:layout_margin="@dimen/margin_large"
                 android:layout_weight="1"
                 android:src="@mipmap/ic_settings_power_white_24dp" />
         </LinearLayout>

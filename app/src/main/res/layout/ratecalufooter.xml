@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:background="@color/clear_back"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="5dp"
+                android:text="Rate Calculation"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/close_ratecalcultorIMG"
+                android:layout_width="@dimen/textview_or_edittext_hight_large"
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:src="@mipmap/ic_clear_white_24dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fromcurrency_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:text="1 SRD equals"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/material_animations_accent"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tocurrency_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:text="0.099 USD"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/material_animations_accent"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:paddingLeft="5dp"
+                android:text="From:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/material_animations_accent"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/fromcurrency_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:background="@color/color_sandyBrown" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/fromcurrency_value"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_weight="1"
+            android:background="@drawable/blue_border"
+            android:gravity="right|center"
+            android:inputType="numberDecimal"
+            android:paddingRight="5dp"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold">
+
+            <requestFocus />
+        </EditText>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|center"
+                android:paddingLeft="5dp"
+                android:text="To:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/material_animations_accent"
+                android:textStyle="bold" />
+
+
+            <Spinner
+                android:id="@+id/tocurrency_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/greenMid" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/tocurrency_value"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_large"
+            android:layout_weight="1"
+            android:background="@drawable/blue_border"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right|center"
+            android:layout_marginBottom="5dp"
+            android:inputType="numberDecimal"
+            android:paddingRight="5dp"
+            android:text="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold">
+
+            <requestFocus />
+        </EditText>
+
+    </LinearLayout>
+
+</FrameLayout>

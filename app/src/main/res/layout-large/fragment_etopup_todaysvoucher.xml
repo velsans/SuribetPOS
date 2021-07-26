@@ -7,7 +7,7 @@
     tools:ignore="MissingDefaultResource">
 
 
-    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <HorizontalScrollView
         android:id="@+id/retailerScrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,15 +21,42 @@
             android:background="@color/primary"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/fromdateTodate"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/textview_or_edittext_hight"
-                android:gravity="left|center"
-                android:paddingLeft="10dp"
-                android:text="@string/Date"
-                android:textColor="@color/edittext_hint"
-                android:textStyle="bold" />
+                android:layout_height="@dimen/textview_or_edittext_hight_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fromdateTodate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".8"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:text="@string/Date"
+                    android:textColor="@color/edittext_hint"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:gravity="right|center"
+                    android:paddingRight="10dp"
+                    android:text="@string/collected_amount"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/LastCollectedAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/red"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -254,7 +281,7 @@
         android:focusableInTouchMode="true"
         android:visibility="gone">
 
-        <include layout="@layout/pdf_file_create" />
+        <include layout="@layout/bill_etopup" />
     </LinearLayout>
 
 

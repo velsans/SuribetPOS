@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="PAID"
+            android:text="@string/PAID"
             android:textSize="20sp"/>
         <TextView
             android:id="@+id/WDR_txt"
@@ -43,7 +43,7 @@
             android:layout_weight="2"
             android:gravity="center"
             android:textStyle="bold"
-            android:text="WDR"
+            android:text="@string/WDR"
             android:textSize="20sp"/>
 </LinearLayout>
     <LinearLayout
@@ -108,7 +108,7 @@
                 android:textStyle="bold"
                 android:background="@drawable/rectangle_black_box"
                 android:gravity="center"
-                android:text="AMOUNT"
+                android:text="@string/AMOUNT"
                 android:textSize="20sp"/>
             <TextView
                 android:id="@+id/Currency_txt"

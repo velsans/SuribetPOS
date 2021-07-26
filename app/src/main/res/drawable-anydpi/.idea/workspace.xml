@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d5fda05-71e7-4018-8d5e-b261e6c9d241" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/navEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/render.experimental.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/RetrofitInstance.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ServiceURL.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/TopupApi.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/cashout/CashoutInputPaymentModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/cashout/CashoutPaymentDetailsModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/cashout/RequestInputModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/cashout/TransactionInputModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/CashoutCommissionInputModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/CashoutCommissonReportDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/ProductName_User.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/CardValidationModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Salesvouchers.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutCommissionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutCommissionFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutCreateFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutCreateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutTransactionAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/TransactionFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/viewmodel/CashoutCommissionViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/viewmodel/CashoutCreateViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/viewmodel/TransactionViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/commission/BreakupdetailsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/commission/viewmodel/BreakupdetailsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenomClickListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenominationAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenominationBottomFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenominationBottomViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenominationModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/denomination/DenominationResponceModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/PtCommPaidBottomViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/PtCommSoldBottomViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_CommPaidBottomFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_CommPaidFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_CommSoldBottomFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_CommSoldFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_CommissionFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_SalesFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_Sales_GenrateFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/Pt_Sales_TransactionFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/fragments/adapter/TransactionAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/model/Pt_TransactionDetails.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/model/Pt_Transactions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/ui/PlayableTicketActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/ui/PlayableTicketCommissionActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtCommPaidViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtCommSoldViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtCommissionViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtSalesGenrateViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtSalesTransactionViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/playabletickets/viewmodel/PtSalesViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/adapter/CancelledVoucherAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/adapter/CreateVoucherAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/adapter/CreateVoucherClickListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/fragments/CancelVoucherFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/fragments/CancelledVoucherFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/fragments/CreateVoucherFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/model/CancelledVoucherModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/model/CancelledVoucherResponce.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/model/CreateVoucherModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/model/CreateVoucherResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/model/TopupPrintoutDetailsModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/repo/CancelledRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/repo/CreateVoucherRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/ui/TopUpActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/viewmodel/CancelVoucherViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/viewmodel/CancelledVoucherViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/viewmodel/CancelledVoucherViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/viewmodel/CreateVoucherViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/topup/viewmodel/CreateVoucherViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/OnlineCashOutActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/CreatePDF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/PrintSlipsClass.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/SuribetException.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/minus_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-ldpi/createvoucherstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_baseline_add_circle_outline_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_baseline_attach_money_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_baseline_auto_graph_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_baseline_details_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_dollar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/money_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/plus_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ticket_cancel_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable/ticket_icon.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-large/bill_cashout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-large/cashcommission_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-large/createcashout_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-large/superbet_card_validation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-large/transaction_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/bill_cashout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/cashcommission_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/cashtransaction_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/createcashout_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/superbet_card_validation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout-normal/transaction_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_playable_ticket.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_playable_ticket_commission.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_topup.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/breakupdetails_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/camncel_voucher_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/cancelled_voucher_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/cancelled_voucher_items.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/create_voucher_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/create_voucher_items.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/denomination_bottom_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/denomination_bottom_item.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt__comm_paid_bottom_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt__comm_sold_bottom_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_comm_paid_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_comm_sold_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_commission_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_sales_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_sales_generation_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_sales_transaction_details_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_sales_transaction_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/pt_sales_transaction_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/topup_payment_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/cashout_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/pt_bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/topup_bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-hdpi/barcode.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-hdpi/external_purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-hdpi/hm_e_cashout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-mdpi/external_purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xhdpi/external_purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/external_purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/external_purchase.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/hm_playable_ticket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/hm_ticket_payout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/pt_commission.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/pt_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/pt_sales.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/topup_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/arrays.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml/filepaths.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../xml/provider_paths.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/assetWizardSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ApiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ApiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ApiInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ApiInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/NetWorkModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/RetrofitDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/RetrofitDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/api/ServiceURL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/fcm/AutoUpdateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/fcm/AutoUpdateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/fcm/DownloadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/fcm/DownloadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/WRDCommissionReportDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/WRDCommissionReportDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/WRDCommissionReportLimits.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/WRDCommissionReportLimits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/Wdrpaidcommissionlimits.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/Wdrpaidcommissionlimits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/Wdrpaidcommissionvalues.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/commission/CashoutCommissionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Addupdateprintvouchersdetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Addupdatevoucherwithusertopupcard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Addupdatevoucherwithusertopupcard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/ClientDenominationInputModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/ClientDenominationModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Denominationerrormessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Denominationerrormessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/ProductName_User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/StatusModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/StatusModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Userdetails_user.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/common/Userdetails_user.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/AddETopupModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/AddETopupModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/BalanceAmountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/BalanceAmountModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/CommissionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/CommissionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/TillEtopUpTransactionsModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/TillEtopUpTransactionsModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/TillTransactionAmountModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/etopup/TillTransactionAmountModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/CashOutPaymentDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/CashOutPaymentLimits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/Cashouttransactiondetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/cashout/TransactionDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/Cashouttransactionlimits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/Cashoutwdrpaymentdetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/viewmodel/RequestNrModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/onlinecashout/Cashoutwdrpaymentlimits.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Cancelsalevoucherhistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Cancelsalevoucherhistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Cancelsalevoucherhistorylist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Salesvouchers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Securityvalidateuser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Securityvalidateuser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/model/topup/Updateprintvoucher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/sessionout/MyApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/data/sessionout/MyApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/adapter/CashoutTransactionAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/cashout/CreateFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/cashout/TodaysVoucherFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/commissions/ETopUpCommissionFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/etopup/ETopUpCommissionFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/etopup/CreateFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/etopup/CreateFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/etopup/ETopUpFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/etopup/TodaysVoucherAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/etopup/TodaysVoucherAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/fragments/etopup/TodaysVoucherFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/etopup/TodaysVoucherFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/CashoutActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/cashout/CashoutActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/ChangePasswordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/ChangePasswordActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/CommissionsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/CommissionsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/ETopUpActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/etopup/ETopUpActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/NewHomeActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/NewHomeActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/SplashScreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/SplashScreenActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/UserAuthenticationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/view/UserAuthenticationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/ui/viewmodel/CashoutTransactionViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/AlertDialogManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/AlertDialogManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/SuribetException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/commonclasses/UserAuthentication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/suribetpos/main/utils/commonclasses/UserAuthentication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/activity_lgpayment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/activity_lgpayment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/activity_splashscreen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/activity_splashscreen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/activity_user_authentication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/activity_user_authentication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/cashoutprintslip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/cashoutprintslip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/cashouttrans_listview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/cashtransaction_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/devicelistactivity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/devicelistactivity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/footer_lotto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/footer_lotto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/footer_sales_voucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/footer_sales_voucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/footerdailygame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/footerdailygame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_cashout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/activity_onlinecashout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_cashout_create.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_cashout_todaysvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_cashout_todaysvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_dgcancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_dgcancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_dgcancelled.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_dgcancelled.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_dgmain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_dgmain.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_dgpayoutfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_dgpayoutfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_etopup_create.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_etopup_create.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_etopup_todaysvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_etopup_todaysvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_lottogame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_lottogame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_lottogamebet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_lottogamebet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_lottopayoutfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_lottopayoutfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_sales_commision.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_sales_commision.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_topupcancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_topupcancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_topupcancelledvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_topupcancelledvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_topupcreate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_topupcreate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_topupvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/fragment_topupvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/fragment_wdrcommission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/cash_out_commission_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/freeticket_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/freeticket_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/lotto_cancelfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/lotto_cancelfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/onlinepayout_footer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/onlinepayout_footer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/payoutcommissionvalue_listview.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/pdf_file_create.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/pdf_file_create.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/sample.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/toolbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-large/transaction_history_listview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/transaction_history_listview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/activity_lgpayment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/activity_lgpayment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/activity_splashscreen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/activity_splashscreen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/activity_user_authentication.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/activity_user_authentication.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/cashoutprintslip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/cashoutprintslip.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/cashouttrans_listview.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/devicelistactivity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/devicelistactivity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/footer_lotto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/footer_lotto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/footer_sales_voucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/footer_sales_voucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/footerdailygame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/footerdailygame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_cashout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/activity_onlinecashout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_cashout_create.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_cashout_todaysvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_cashout_todaysvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_changepassowrd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_changepassowrd.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_dgcancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_dgcancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_dgcancelled.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_dgcancelled.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_dgmain.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_dgmain.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_dgpayoutfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_dgpayoutfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_etopup.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_etopup.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_etopup_create.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_etopup_create.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_etopup_todaysvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_etopup_todaysvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_livebet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_livebet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_lottogame.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_lottogame.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_lottogamebet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_lottogamebet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_lottopayoutfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_lottopayoutfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_sales_commision.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_sales_commision.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_topupcancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_topupcancel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_topupcancelledvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_topupcancelledvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_topupcreate.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_topupcreate.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_topupvoucher.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/fragment_topupvoucher.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/fragment_wdrcommission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-large/cash_out_commission_fragment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/freeticket_payment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/freeticket_payment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/lotto_cancelfooter.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/lotto_cancelfooter.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/new_home_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/new_home_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/onlinepayout_footer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/onlinepayout_footer.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/payoutcommissionvalue_listview.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/pdf_file_create.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/pdf_file_create.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/sample.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/sample.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/toolbar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/toolbar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout-normal/transaction_history_listview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout-normal/transaction_history_listview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-hdpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-hdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-mdpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-mdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xhdpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xhdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxhdpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxhdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxxhdpi/close.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/close.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mipmap-xxxhdpi/hm_password.png" beforeDir="false" afterPath="$PROJECT_DIR$/../mipmap-xxxhdpi/hm_password.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values-zh-rCN/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values-zh-rCN/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/color.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/color.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/dimens.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/dimens.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="1obER94yL5vvDAZDvRgGClg5tEo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../../../../../../Android/SDK" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d5fda05-71e7-4018-8d5e-b261e6c9d241" name="Default Changelist" comment="" />
+      <created>1613546878046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613546878046</updated>
+    </task>
+    <servers />
+  </component>
+</project>

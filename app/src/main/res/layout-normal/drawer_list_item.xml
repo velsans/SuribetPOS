@@ -23,7 +23,7 @@
             android:id="@+id/icon"
             android:layout_width="30dp"
             android:layout_height="@dimen/textview_or_edittext_hight_large"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/padding_large"
             android:contentDescription="desc_list_item_icon"
             android:src="@mipmap/ic_home"/>
 
@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/padding_large"
             android:gravity="left|center"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/color_whit"/>

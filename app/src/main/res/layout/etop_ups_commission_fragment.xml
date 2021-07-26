@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    tools:context=".main.ui.commission.fragments.EtopUpsCommissionFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/etopup_headguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".05" />
+
+    <TextView
+        android:id="@+id/etopup_headtxt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="@string/EtopUp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etopup_headguideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fromdateTodate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_whit"
+        android:gravity="left|center"
+        android:paddingLeft="10dp"
+        android:text="@string/Date"
+        android:textColor="@color/edittext_hint"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/etopup_headguideline" />
+
+    <SearchView
+        android:id="@+id/date_searchView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/Date"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/head_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/textView76"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromdateTodate"
+        app:layout_constraintVertical_bias="0.0">
+
+    </SearchView>
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/BarCode"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/head_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/textView77"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/date_searchView"
+        app:layout_constraintTop_toTopOf="@+id/date_searchView"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/Amount"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/head_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView76"
+        app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/head_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailsguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".89" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/etopup_recyclerView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/detailsguideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_guideline"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/totalsoldvalues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detailsguideline">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/total_sold"
+            android:textColor="@color/red" />
+
+
+        <TextView
+            android:id="@+id/etv_txtSoldTotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblAccountNumber"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalsalescommissionvalues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalsoldvalues">
+
+
+        <TextView
+            android:id="@+id/etv_salesComission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/Total_sales_Commission"
+            android:textColor="@color/red" />
+
+
+        <TextView
+            android:id="@+id/etv_txtSalesComission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblAccountNumber"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalsalescommissionvalues">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/Balance"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/etv_txtBalReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

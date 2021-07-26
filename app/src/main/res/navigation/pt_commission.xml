@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pt_commission"
+    app:startDestination="@id/pt_CommSoldFragment">
+
+    <fragment
+        android:id="@+id/pt_CommSoldFragment"
+        android:name="com.suribetpos.main.ui.playabletickets.fragments.Pt_CommSoldFragment"
+        android:label="Commission Sold"
+        tools:layout="@layout/pt_comm_sold_fragment" />
+    <fragment
+        android:id="@+id/pt_CommPaidFragment"
+        android:name="com.suribetpos.main.ui.playabletickets.fragments.Pt_CommPaidFragment"
+        android:label="Commission Paid"
+        tools:layout="@layout/pt_comm_paid_fragment" />
+</navigation>

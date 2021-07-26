@@ -3,6 +3,8 @@ package com.suribetpos.main.ui.view;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import es.dmoral.toasty.Toasty;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -82,13 +85,13 @@ public class ChangePasswordActivity extends BaseActivity implements View.OnClick
         ClientInfoApi.getChangedPassword(pChangePassword).enqueue(new Callback<Changepassword>() {
             @Override
             public void onResponse(Call<Changepassword> call, Response<Changepassword> response) {
-                if (response.isSuccessful()) {
+                if (response.body() != null) {
                     StatusList = response.body().getTable();
                     if (StatusList.get(0).getStatus() == 1) {
-                        customMsg = CommonMessage(R.string.PassWordResetHead) + "\n" + Common.LanguageMap.get(StatusList.get(0).getErrorCode()) +"--"+ NewPassword + "\n" + CommonMessage(R.string.login_newpassword);
+                        customMsg = CommonMessage(R.string.PassWordResetHead) + "\n" + Common.LanguageMap.get(StatusList.get(0).getErrorCode()) + "--" + NewPassword + "\n" + CommonMessage(R.string.login_newpassword);
                         MessageAlertSuccessFullyChange(customMsg);
                     } else {
-                        AlertDialogBox(CommonMessage(R.string.PassWordResetHead), CommonMessage(R.string.userID_doesnot_exists) + " " + CommonMessage(R.string.please_Contact_admin), false);
+                        AlertDialogBox(CommonMessage(R.string.PassWordResetHead), Common.LanguageMap.get(StatusList.get(0).getErrorCode()), false);
                     }
                 } else {
                     AlertDialogBox(CommonMessage(R.string.PassWordResetHead), CommonMessage(R.string.APINotResponding), false);
@@ -112,6 +115,33 @@ public class ChangePasswordActivity extends BaseActivity implements View.OnClick
         btnCloseIMG = findViewById(R.id.btnClose);
         btnCloseIMG.setOnClickListener(this);
         txtOldPassword = findViewById(R.id.txtOldPassword);
+
+        txtNewPassoword.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                System.out.println("Character at 0 index is: " + s + "-" + count);
+                if (count > 0) {
+                    char ch1 = s.charAt(0);
+                    String sam = String.valueOf(ch1);
+                    //boolean res = sam.equals("0");
+                    if (sam.equals("0") == true) {
+                        Toasty.error(ChangePasswordActivity.this, CommonMessage(R.string.FirstLetter), Toasty.LENGTH_SHORT, true).show();
+                        txtNewPassoword.setText("");
+                        return;
+                    }
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public boolean CheckisInternetPresent() {
@@ -129,14 +159,19 @@ public class ChangePasswordActivity extends BaseActivity implements View.OnClick
         }
     }
 
-    private boolean ValidationChangePassowrd(String NewPassowrd, String ConfirmPassowrd) {
+    private boolean ValidationChangePassowrd(String Old_password, String NewPassowrd, String ConfirmPassowrd) {
+        if (Old_password.equals("")) {
+            AlertDialogBox(CommonMessage(R.string.PassWord_reset_validation), CommonMessage(R.string.Old_password_is_required), false);
+            txtOldPassword.requestFocus();
+            return false;
+        }
         if (NewPassowrd.equals("")) {
-            AlertDialogBox(CommonMessage(R.string.PassWord_reset_validation), CommonMessage(R.string.New_Password), false);
+            AlertDialogBox(CommonMessage(R.string.PassWord_reset_validation), CommonMessage(R.string.New_password_is_required), false);
             txtNewPassoword.requestFocus();
             return false;
         }
         if (ConfirmPassowrd.equals("")) {
-            AlertDialogBox(CommonMessage(R.string.PassWord_reset_validation), CommonMessage(R.string.Confirm_Password), false);
+            AlertDialogBox(CommonMessage(R.string.PassWord_reset_validation), CommonMessage(R.string.Confirm_password_is_required), false);
             txtConfirmPassword.requestFocus();
             return false;
         }
@@ -191,7 +226,7 @@ public class ChangePasswordActivity extends BaseActivity implements View.OnClick
                 HomeActivty();
                 break;
             case R.id.btnChangePassword:
-                if (ValidationChangePassowrd(txtNewPassoword.getText().toString(), txtConfirmPassword.getText().toString())) {
+                if (ValidationChangePassowrd(txtOldPassword.getText().toString(), txtNewPassoword.getText().toString(), txtConfirmPassword.getText().toString())) {
                     NewPassword = txtNewPassoword.getText().toString();
                     OldPassword = txtOldPassword.getText().toString();
                     if (!CheckisInternetPresent()) {

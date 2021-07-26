@@ -1,9 +1,7 @@
 package com.suribetpos.main.data.model.common;
 
-import java.util.ArrayList;
-
 public class StatusModel {
-    String Message, Currency, MobileNumber, ReplaceMgs, ErrorCode, extraparm,CountryCode;
+    String Message, Currency, MobileNumber, ReplaceMgs, ErrorCode, extraparm,CountryCode,TillLimit,ClientName;
     int Status, JournalId;
     boolean SMSIsactive;
 
@@ -87,6 +85,20 @@ public class StatusModel {
         this.SMSIsactive = SMSIsactive;
     }
 
+    public String getTillLimit() {
+        return TillLimit;
+    }
 
+    public void setTillLimit(String tillLimit) {
+        TillLimit = tillLimit;
+    }
+
+    public String getClientName() {
+        return ClientName;
+    }
+
+    public void setClientName(String clientName) {
+        ClientName = clientName;
+    }
 }
 

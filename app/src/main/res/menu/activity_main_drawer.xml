@@ -14,7 +14,7 @@
         <item
             android:id="@+id/e_Topup"
             android:icon="@mipmap/etopup"
-            android:title="E-Topup"/>
+            android:title="Topup"/>
         <item
             android:id="@+id/topup_voucher"
             android:icon="@mipmap/topup"

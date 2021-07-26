@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="right|center"
-                android:paddingRight="10dp"
+                android:paddingRight="@dimen/padding_large"
                 android:text="@string/Select_Language"
                 android:textColor="@color/sample_blue" />
 
@@ -64,6 +64,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/live_local_TxT"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/textview_or_edittext_hight_normal"
                 android:gravity="center"

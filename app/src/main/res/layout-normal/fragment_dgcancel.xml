@@ -64,7 +64,7 @@
                     android:gravity="center"
                     android:src="@mipmap/barcodeicon"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@drawable/black"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -90,7 +90,7 @@
                 android:gravity="center"
                 android:src="@mipmap/searchball"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@drawable/black"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
 
 
@@ -367,7 +367,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/cancel_vouchers"
+            android:id="@+id/cancel_vouchersTXT"
             android:layout_width="match_parent"
             android:layout_height="@dimen/textview_or_edittext_hight"
             android:layout_gravity="bottom"

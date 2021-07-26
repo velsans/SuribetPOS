@@ -8,14 +8,15 @@ public class Userdetails_user {
 
     public int UserID, IsTillActive, IsTillGDActive, IsMainBank, MaxBetsPerSlip, MaximumPayout, IsExtraSlipPrintOutNeeded, MaxPayoutCurrencyID, MinimumBet,
             MinimumBetCurrID,SlipValidity, UpdateTimerIntervel,IsConfirmPrintNeeded, AutoClearInterval, IsPasswordChangeNeeded, OutRightBet, TillID, LocationID,
-            AutoLogOffIdleTimeLimit, AutoLogOffTimerInterval, SBGameListRefreshInterval, EnableSBCurrency, CountryCode,ClientID, LocationTypeID;
+            AutoLogOffIdleTimeLimit, AutoLogOffTimerInterval, SBGameListRefreshInterval, EnableSBCurrency, CountryCode,ClientID, LocationTypeID,MinCashoutValidation;
 
     public String UserName, MainBankGamingDate, TillGamingDate, TillName, BackColor, WCFEndPointAddress, MaximumTillOperatingTime, DailyGameWCFEndpointAddress,
             LottoGameWCFEndPointAddress, VirtualGameWCFEndpointAddress,LiveBetWCFEndPointAddress, LocationCode, LocationName, GameListWCFEndPointAddress,
             ShopTransactionServiceAddress, LocalCurrency, CurrentDateTime, LiveBettingListenerServiceURL, OtherProductServiceURL,ClientName, Address, Phone,
-            GameListVGSportsApiURL, VirtualSportsClientAPIUrl, VirtualDailyGameSignalR, VirtualDailyGameAPI, GPSignalRHost, VGSignalRConn, PlayableTicketsApiURL;
+            GameListVGSportsApiURL, VirtualSportsClientAPIUrl, VirtualDailyGameSignalR, VirtualDailyGameAPI, GPSignalRHost, VGSignalRConn, PlayableTicketsApiURL,
+            CustomerTrackerApiURL ;
     public double Playableticketmaxamt, Playableticketminamt, MaximumBetCreditLimit, MaximumPayLimit, MinimumOddValue, VGTaxPer;
-    public boolean ShowCustomerDisplay, EnablePrinterValidation, ShowVGTaxCalc;
+    public boolean ShowCustomerDisplay, EnablePrinterValidation, ShowVGTaxCalc,EnableCashoutValidation;
 
     public int getIsTillActive() {
         return IsTillActive;
@@ -520,5 +521,29 @@ public class Userdetails_user {
 
     public void setUserID(int userID) {
         UserID = userID;
+    }
+
+    public int getMinCashoutValidation() {
+        return MinCashoutValidation;
+    }
+
+    public void setMinCashoutValidation(int minCashoutValidation) {
+        MinCashoutValidation = minCashoutValidation;
+    }
+
+    public String getCustomerTrackerApiURL() {
+        return CustomerTrackerApiURL;
+    }
+
+    public void setCustomerTrackerApiURL(String customerTrackerApiURL) {
+        CustomerTrackerApiURL = customerTrackerApiURL;
+    }
+
+    public boolean getEnableCashoutValidation() {
+        return EnableCashoutValidation;
+    }
+
+    public void setEnableCashoutValidation(boolean enableCashoutValidation) {
+        EnableCashoutValidation = enableCashoutValidation;
     }
 }

@@ -13,7 +13,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -31,11 +30,17 @@ import com.suribetpos.R;
 import com.suribetpos.main.data.api.ApiClient;
 import com.suribetpos.main.data.api.ApiInterface;
 import com.suribetpos.main.data.fcm.CrashAnalytics;
-import com.suribetpos.main.data.model.common.ClientDenominationInputModel;
+import com.suribetpos.main.ui.commission.ui.CommissionPage;
+import com.suribetpos.main.ui.denomination.DenominationResponceModel;
 import com.suribetpos.main.data.model.common.StatusModel;
 import com.suribetpos.main.data.model.etopup.BalanceAmountModel;
 import com.suribetpos.main.data.model.languages.LanguagesListModel;
 import com.suribetpos.main.data.model.etopup.TillTransactionAmountModel;
+import com.suribetpos.main.ui.cashout.CashoutActivity;
+import com.suribetpos.main.ui.denomination.DenominationResponceModel;
+import com.suribetpos.main.ui.etopup.ETopUpActivity;
+import com.suribetpos.main.ui.playabletickets.ui.PlayableTicketActivity;
+import com.suribetpos.main.ui.topup.ui.TopUpActivity;
 import com.suribetpos.main.utils.AlertDialogManager;
 import com.suribetpos.main.utils.Common;
 import com.suribetpos.main.utils.ConnectionFinder;
@@ -73,7 +78,7 @@ public class NewHomeActivity extends BaseActivity {
     /*Toolbar*/
     ImageView toolbarHome, toolbarSignOUT;
     TextView toolbarTitle, toolbarAmount;
-    List<StatusModel> StatusList = new ArrayList<StatusModel>();
+    public static List<StatusModel> StatusList = new ArrayList<StatusModel>();
     public static ArrayList<BalanceAmountModel> BalanceAmountList = new ArrayList<>();
     //-5-2020
     Timer timer;
@@ -99,6 +104,8 @@ public class NewHomeActivity extends BaseActivity {
         startTimer();
         session = new SessionManager(getApplicationContext());
         LanguageSelection();
+        //RefreshBalance();
+        DoLoginVerifications();
     }
 
     @Override
@@ -108,7 +115,6 @@ public class NewHomeActivity extends BaseActivity {
         ClientInfoApi = ApiClient.getInstance().getUserService();
         initiallization();
         ToolBarView();
-        DoLoginVerifications();
         //onResume we start our timer so it can start when the app comes from the background
         startTimer();
         //new GetHomeClientDenomination().execute();
@@ -118,22 +124,15 @@ public class NewHomeActivity extends BaseActivity {
             GetHomeClientDenominationAPI();
         }
         ProductList();
-        resetPassWordTxT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //if (Common.IsPassWordChangeNeeded == true) {
-                Intent resetPassword = new Intent(NewHomeActivity.this, ChangePasswordActivity.class);
-                startActivity(resetPassword);
-                //}
-            }
+        resetPassWordTxT.setOnClickListener(v -> {
+            //if (Common.IsPassWordChangeNeeded == true) {
+            Intent resetPassword = new Intent(NewHomeActivity.this, ChangePasswordActivity.class);
+            startActivity(resetPassword);
+            //}
         });
-        Language_spin.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                LanguageFlagLocal = true;
-                return false;
-            }
+        Language_spin.setOnTouchListener((v, event) -> {
+            LanguageFlagLocal = true;
+            return false;
         });
 
         Language_spin.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -170,6 +169,7 @@ public class NewHomeActivity extends BaseActivity {
         });
     }
 
+    // bottom timer
     public void startTimer() {
         timer = new Timer();
         initializeTimerTask();
@@ -192,13 +192,11 @@ public class NewHomeActivity extends BaseActivity {
     public void initializeTimerTask() {
         timerTask = new TimerTask() {
             public void run() {
-                handler.post(new Runnable() {
-                    public void run() {
-                        Calendar calendar = Calendar.getInstance();
-                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
-                        final String strDate = simpleDateFormat.format(calendar.getTime());
-                        tvTimer.setText(strDate);
-                    }
+                handler.post(() -> {
+                    Calendar calendar = Calendar.getInstance();
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss");
+                    final String strDate = simpleDateFormat.format(calendar.getTime());
+                    tvTimer.setText(strDate);
                 });
             }
         };
@@ -214,23 +212,27 @@ public class NewHomeActivity extends BaseActivity {
     }
 
     public void LanguageSelection() {
-        ArrayAdapter<String> sp_adapter = new ArrayAdapter<String>(this, R.layout.spinnertext, Common.LanguagesStringArray) {
-            @Override
-            public View getDropDownView(int position, View convertView, ViewGroup parent) {
-                View v = null;
-                v = super.getDropDownView(position, null, parent);
-                if (position == Common.LanguageIDPOS) {
-                    v.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                } else {
-                    v.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        try {
+            ArrayAdapter<String> sp_adapter = new ArrayAdapter<String>(this, R.layout.spinnertext, Common.LanguagesStringArray) {
+                @Override
+                public View getDropDownView(int position, View convertView, ViewGroup parent) {
+                    View v = null;
+                    v = super.getDropDownView(position, null, parent);
+                    if (position == Common.LanguageIDPOS) {
+                        v.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    } else {
+                        v.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                    }
+                    return v;
                 }
-                return v;
-            }
-        };
-        sp_adapter.setDropDownViewResource(R.layout.spinner_selector);
-        sp_adapter.notifyDataSetChanged();
-        Language_spin.setAdapter(sp_adapter);
-        Language_spin.setSelection(Common.LanguageIDPOS);
+            };
+            sp_adapter.setDropDownViewResource(R.layout.spinner_selector);
+            sp_adapter.notifyDataSetChanged();
+            Language_spin.setAdapter(sp_adapter);
+            Language_spin.setSelection(Common.LanguageIDPOS);
+        } catch (Exception ex) {
+
+        }
     }
 
     public void ProductList() {
@@ -290,11 +292,11 @@ public class NewHomeActivity extends BaseActivity {
         ShowProgressBar(true);
         Common.ClientDenomination.clear();
         ClientInfoApi = ApiClient.getApiInterface();
-        ClientInfoApi.GetAllActiveDenomination(Common.ClientId).enqueue(new Callback<ClientDenominationInputModel>() {
+        ClientInfoApi.GetAllActiveDenomination(Common.ClientId).enqueue(new Callback<DenominationResponceModel>() {
             @Override
-            public void onResponse(Call<ClientDenominationInputModel> call, Response<ClientDenominationInputModel> response) {
+            public void onResponse(Call<DenominationResponceModel> call, Response<DenominationResponceModel> response) {
                 if (SuribetException.APIException(response.code()) == true) {
-                    if (response.isSuccessful()) {
+                    if (response.body() != null) {
                         ErrorMessage = response.body().getM_Item1();
                         if (isNullOrEmpty(ErrorMessage)) {
                             Common.ClientDenomination.addAll(response.body().getM_Item2());
@@ -314,7 +316,7 @@ public class NewHomeActivity extends BaseActivity {
             }
 
             @Override
-            public void onFailure(Call<ClientDenominationInputModel> call, Throwable t) {
+            public void onFailure(Call<DenominationResponceModel> call, Throwable t) {
                 CrashAnalytics.logReportOnly(t.toString());
                 AlertDialogBox(CommonMessage(R.string.Denomination), t.getMessage(), false);
                 ShowProgressBar(false);
@@ -429,11 +431,7 @@ public class NewHomeActivity extends BaseActivity {
         builder1.setMessage(ErrorMessage);
         builder1.setCancelable(true);
         builder1.setPositiveButton(CommonMessage(R.string.Cancel),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
-                    }
-                });
+                (dialog, id) -> dialog.cancel());
         builder1.setNegativeButton(CommonMessage(R.string.SignOut),
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -478,36 +476,41 @@ public class NewHomeActivity extends BaseActivity {
         public void onBindViewHolder(NewHomeViewholder holder, final int position) {
             //holder.clientProdctname.setText(productName.get(position).toString());
             holder.clientProductIcon.setImageBitmap(productImg.get(position));
-            holder.clientProductIcon.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    String productNames = productName.get(position);
-                    Intent productIntent;
-                    if (Common.ClientProductDetails.size() > 0) {
-                        for (int productFooterCount = 0; productFooterCount < Common.ClientProductDetails.size(); productFooterCount++) {
-                            if (Common.ClientProductDetails.get(productFooterCount).getProductName().equals(productNames)) {
-                                Common.VoucherFooterText = Common.ClientProductDetails.get(productFooterCount).getFooterContent();
-                                Common.VoucherTerms = Common.ClientProductDetails.get(productFooterCount).getTerms();
-                                Common.VoucherLogo = StringToBitMap(Common.ClientProductDetails.get(productFooterCount).getProductLogo());
-                                break;
-                            }
+            holder.clientProductIcon.setOnClickListener(v -> {
+                String productNames = productName.get(position);
+                Intent productIntent;
+                if (Common.ClientProductDetails.size() > 0) {
+                    for (int productFooterCount = 0; productFooterCount < Common.ClientProductDetails.size(); productFooterCount++) {
+                        if (Common.ClientProductDetails.get(productFooterCount).getProductName().equals(productNames)) {
+                            Common.VoucherFooterText = Common.ClientProductDetails.get(productFooterCount).getFooterContent();
+                            Common.VoucherTerms = Common.ClientProductDetails.get(productFooterCount).getTerms();
+                            Common.VoucherLogo = StringToBitMap(Common.ClientProductDetails.get(productFooterCount).getProductLogo());
+                            break;
                         }
                     }
-                    if (productNames.equals("E-Topup")) {
-                        //fragment = new ETopUpFragment();
-                        productIntent = new Intent(NewHomeActivity.this, ETopUpActivity.class);
-                        startActivity(productIntent);
-                    } else if (productNames.equals("Commissions")) {
-                        //fragment = new ETopUpFragment();
-                        productIntent = new Intent(NewHomeActivity.this, CommissionsActivity.class);
-                        startActivity(productIntent);
-                    } else if (productNames.equals("OnlinePayout")) {
-                        //fragment = new ETopUpFragment();
-                        productIntent = new Intent(NewHomeActivity.this, CashoutActivity.class);
-                        startActivity(productIntent);
-                    } else {
-                        AlertDialogBox(CommonMessage(R.string.Home_Page), CommonMessage(R.string.In_the_future), false);
-                    }
+                }
+                /*if (productNames.equals("Dailygame")) {
+                    productIntent = new Intent(NewHomeActivity.this, Dail.class);
+                    startActivity(productIntent);
+                }*/
+                if (productNames.equals("E-Topup")) {
+                    productIntent = new Intent(NewHomeActivity.this, ETopUpActivity.class);
+                    startActivity(productIntent);
+                } else if (productNames.equals("Commissions")) {
+                    //productIntent = new Intent(NewHomeActivity.this, CommissionsActivity.class);
+                    productIntent = new Intent(NewHomeActivity.this, CommissionPage.class);
+                    startActivity(productIntent);
+                } else if (productNames.equals("OnlinePayout")) {
+                    productIntent = new Intent(NewHomeActivity.this, CashoutActivity.class);
+                    startActivity(productIntent);
+                } else if (productNames.equals("PlayableTickets")) {
+                    productIntent = new Intent(NewHomeActivity.this, PlayableTicketActivity.class);
+                    startActivity(productIntent);
+                } else if (productNames.equals("TopupVoucher")) {
+                    productIntent = new Intent(NewHomeActivity.this, TopUpActivity.class);
+                    startActivity(productIntent);
+                } else {
+                    AlertDialogBox(CommonMessage(R.string.Home_Page), CommonMessage(R.string.In_the_future), false);
                 }
             });
         }
@@ -554,18 +557,11 @@ public class NewHomeActivity extends BaseActivity {
                 YesOnClickListner();
             }
         });*/
-        toolbarSignOUT.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Signout(CommonMessage(R.string.Are_you_SignOut));
-            }
-        });
+        toolbarSignOUT.setOnClickListener(v -> Signout(CommonMessage(R.string.Are_you_SignOut)));
     }
 
     public void RefreshBalance() {
         try {
-            StatusList.clear();
-            BalanceAmountList.clear();
             TillTransactionAmountModel transactionAmountModel = new TillTransactionAmountModel();
             transactionAmountModel.setUserId(Common.UserId);
             transactionAmountModel.setTillId(Common.TillId);
@@ -577,7 +573,9 @@ public class NewHomeActivity extends BaseActivity {
                 public void onResponse(Call<TillTransactionAmountModel> call, Response<TillTransactionAmountModel> response) {
                     // try {
                     if (SuribetException.APIException(response.code()) == true) {
-                        if (response.isSuccessful()) {
+                        if (response.body() != null) {
+                            StatusList.clear();
+                            BalanceAmountList.clear();
                             StatusList.addAll(response.body().getTable());
                             //if (StatusList.size() > 0) {
                             if (StatusList.get(0).getStatus() == 1) {

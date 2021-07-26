@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/pt_SalesFragment"
+        android:icon="@drawable/ic_baseline_auto_graph_24"
+        android:title="@string/pt_sales" />
+
+    <item
+        android:id="@+id/pt_CommissionFragment"
+        android:icon="@drawable/ic_baseline_attach_money_24"
+        android:title="@string/pt_commission" />
+    
+</menu>

@@ -59,4 +59,6 @@ public class TillTransactionAmountModel {
     public void setTable1(ArrayList<BalanceAmountModel> table1) {
         Table1 = table1;
     }
+
+
 }

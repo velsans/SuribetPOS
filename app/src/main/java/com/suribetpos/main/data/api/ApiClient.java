@@ -1,26 +1,8 @@
 package com.suribetpos.main.data.api;
 
 import android.content.Context;
-import android.content.res.Resources;
 
-import com.suribetpos.R;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.cert.Certificate;
-import java.security.cert.CertificateException;
-import java.security.cert.CertificateFactory;
-import java.util.concurrent.TimeUnit;
-
-import javax.net.ssl.KeyManagerFactory;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManagerFactory;
+import com.suribetpos.main.utils.Common;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -29,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    private static Retrofit retrofitHttpExternal = null, retrofitHttpLocalORLive = null, retrofitHttpLanguage = null;
+    private static Retrofit retrofitHttpExternal = null, retrofitHttpLocalORLive = null, retrofitHttpLanguage = null, retrofitCardValidation = null;
     private static ApiClient instance = null;
     Context context;
     // Keep your services here, build them in buildRetrofit method later
@@ -47,6 +29,7 @@ public class ApiClient {
         getApiInterface();
         try {
             getApiLanguageInterface();
+            getCardApiInterface();
         } catch (Exception ex) {
 
         }
@@ -62,6 +45,7 @@ public class ApiClient {
             interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(interceptor)
+                    //.addInterceptor(ChuckerInterceptor(get))
                     .build();
 
             retrofitHttpLocalORLive = new Retrofit.Builder()
@@ -91,6 +75,24 @@ public class ApiClient {
 
         }
         return retrofitHttpLanguage.create(ApiInterface.class);
+    }
+
+    public static ApiInterface getCardApiInterface() {
+        if (retrofitCardValidation == null) {
+            HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+            interceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .addInterceptor(interceptor)
+                    //.addInterceptor(ChuckerInterceptor(get))
+                    .build();
+
+            retrofitCardValidation = new Retrofit.Builder()
+                    .baseUrl(Common.CardValidation_URL)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .client(client)
+                    .build();
+        }
+        return retrofitCardValidation.create(ApiInterface.class);
     }
 
 }

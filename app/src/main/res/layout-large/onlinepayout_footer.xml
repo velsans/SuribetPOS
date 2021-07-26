@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:padding="1dp"
-                android:text="ONLINE PAYOUT"
+                android:text="@string/cashout"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
@@ -42,7 +42,7 @@
                 android:gravity="center"
                 android:padding="1dp"
                 android:src="@mipmap/cancelvoucherwhite"
-                android:textColor="@drawable/black"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
         </FrameLayout>
 
@@ -150,7 +150,7 @@
                                 android:padding="3dp"
                                 android:src="@mipmap/barcodeicon"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                android:textColor="@drawable/black"
+                                android:textColor="@color/black"
                                 android:textStyle="bold" />
 
                             <EditText
@@ -179,7 +179,7 @@
                             android:padding="3dp"
                             android:src="@mipmap/searchball"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@drawable/black"
+                            android:textColor="@color/black"
                             android:textStyle="bold" />
 
 

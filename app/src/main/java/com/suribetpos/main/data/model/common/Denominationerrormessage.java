@@ -1,5 +1,7 @@
 package com.suribetpos.main.data.model.common;
 
+import com.suribetpos.main.ui.denomination.DenominationModel;
+
 import java.util.ArrayList;
 
 public class Denominationerrormessage {
@@ -7,7 +9,7 @@ public class Denominationerrormessage {
 	private String ErrorMessage;
 	private int ClientId;
 	
-	private ArrayList<ClientDenominationModel> listclientdenomination;
+	private ArrayList<DenominationModel> listclientdenomination;
 	
 	public String setErrorMessage(String ErrorMessage)
 	{
@@ -20,7 +22,7 @@ public class Denominationerrormessage {
 	}
 	
 	
-	public ArrayList<ClientDenominationModel> setclientdenomination(ArrayList<ClientDenominationModel> listclientdenomination)
+	public ArrayList<DenominationModel> setclientdenomination(ArrayList<DenominationModel> listclientdenomination)
 	{
 		return this.listclientdenomination = listclientdenomination;
 	}
@@ -36,7 +38,7 @@ public class Denominationerrormessage {
 	}
 	
 	
-	public ArrayList<ClientDenominationModel> getclientdenomination()
+	public ArrayList<DenominationModel> getclientdenomination()
 	{
 		return listclientdenomination;
 	}

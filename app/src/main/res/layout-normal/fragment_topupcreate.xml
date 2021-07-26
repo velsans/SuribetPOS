@@ -35,7 +35,7 @@
             android:id="@+id/popup_window"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/white"
+            android:background="@color/white"
             android:gravity="left"
             android:orientation="vertical"
             android:padding="1px"
@@ -59,7 +59,7 @@
                     android:padding="5dp"
                     android:text="Pick Your Denomination"
                     android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:textColor="@drawable/white"
+                    android:textColor="@color/white"
                     android:textStyle="bold"/>
 
                 <ImageButton
@@ -76,7 +76,7 @@
                 android:id="@+id/TableLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/white"></TableLayout>
+                android:background="@color/white"></TableLayout>
         </com.suribetpos.main.utilities.SlidingPanel>
     </LinearLayout>
 

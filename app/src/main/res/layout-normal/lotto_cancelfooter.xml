@@ -70,7 +70,7 @@
                     android:gravity="center"
                     android:padding="1dp"
                     android:src="@mipmap/barcodeicon"
-                    android:textColor="@drawable/black"
+                    android:textColor="@color/black"
                     android:textStyle="bold" />
 
                 <EditText
@@ -95,7 +95,7 @@
                 android:layout_weight="4"
                 android:gravity="center"
                 android:src="@mipmap/searchball"
-                android:textColor="@drawable/black"
+                android:textColor="@color/black"
                 android:textStyle="bold" />
         </LinearLayout>
 

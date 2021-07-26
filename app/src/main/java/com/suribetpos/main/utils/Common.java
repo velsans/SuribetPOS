@@ -6,24 +6,26 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Set;
-import java.util.Timer;
-import java.util.TimerTask;
 
+import android.app.Activity;
 import android.bluetooth.BluetoothDevice;
+import android.content.Context;
 import android.graphics.Bitmap;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
+
+import androidx.annotation.Nullable;
 
 import com.suribetpos.R;
 import com.suribetpos.main.data.model.common.BetNumberDetails;
 import com.suribetpos.main.data.model.common.Bettypiddetails_user;
-import com.suribetpos.main.data.model.common.Changepassword;
 import com.suribetpos.main.data.model.common.Clientcurrency;
-import com.suribetpos.main.data.model.common.ClientDenominationModel;
+import com.suribetpos.main.ui.denomination.DenominationModel;
 import com.suribetpos.main.data.model.common.Clientinformation;
 import com.suribetpos.main.data.model.common.Clientproductname;
 import com.suribetpos.main.data.model.common.Currenydetails_user;
 import com.suribetpos.main.data.model.common.Denomination;
-import com.suribetpos.main.data.model.common.LanguageModel;
 import com.suribetpos.main.data.model.common.ProductName_User;
 import com.suribetpos.main.data.model.common.Salescommission;
 import com.suribetpos.main.data.model.common.StatusModel;
@@ -63,36 +65,44 @@ import com.suribetpos.main.model.lotto.LGPayoutTransactionAll;
 import com.suribetpos.main.model.lotto.LGReplayTicketDetails;
 import com.suribetpos.main.model.lotto.LGSlipDetails;
 import com.suribetpos.main.model.lotto.LGSlipStatusDetails;
+import com.suribetpos.main.ui.denomination.DenominationModel;
 
 public class Common {
     public static String Netconnection_ClassName, UserName, UserPassword, UserLocation, ClintPhoneNumber,
             ClientName, ClientAddress, TillName, SiteURl, CustomerCare, MobileMacAddress, ServiceURLPath = "", LocationCode = "", ClinetGamingDate, ClientLogoURL,
             CurrentDateTime, EnableSBCurrency, status, CountryClientName, CountryCode, CurrencyCode, VoucherFooterText, VoucherTerms,
-            IsTillActiveMsg = "Till is Not Active! Contact admin for Support!";
+            IsTillActiveMsg = "Till is Not Active! Contact admin for Support!", CardValidation_URL, CustomerCardAccountID = "0";
 
     public static String[] LanguagesStringArray = null;
 
     /*Timer for Background Process*/
     public static double ClientBalance;
-    public static int UserId, TillId, CountryID, CurrencyID, LocationId, LocationTypeId, ClientId,
+    public static int UserId, TillId, CountryID, CurrencyID, LocationId, LocationTypeId, ClientId, CardClientIDValidation = 3,
             TopUpCurrencyId, DrawId, DailyGameMinBet, DailyGameMinBetCurrencyCode, SlipValidity, DailyGameMaximumBet, DailyGameMaxBetCurrencyCode,
-            DailyGameDefaultCurrencyId, DailyGameDrawId, IsTillActive, IsTillGDActive, MinimumBetCurrID, Exceed, LottoFreeTicketLimit, RefreshTimer = 10000, SelectedTabPosition = 0,
-            LanguageIDPOS = 0, SessionLogoutTime = 2000000;
+            DailyGameDefaultCurrencyId, DailyGameDrawId, IsTillActive, IsTillGDActive, MinimumBetCurrID, Exceed, LottoFreeTicketLimit, RefreshTimer = 10000,
+            SelectedTabPosition = 0, LanguageIDPOS = 0, SessionLogoutTime = 900000, MinCashoutAmount;//1500000
     public static SimpleDateFormat DateTimeFormat = new SimpleDateFormat("dd-MMM-yyyy HH:mm");
     public static DecimalFormat decimalFormat = new DecimalFormat("###,###.###");
 
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        return super.equals(obj);
+    }
+
     public static Date IsCurrentDateTime, IsMaximumTillOperatingTime;
 
-    public static boolean AuthorizationFlag = false, timerTaskFlag = false, IsConnected = false, IsMacRegidtered = false, IsNetworkConnection = false, IsRetailer, IsLogoAvailable, topUpemptyFlag = false, topUpcancelFlag = false,
-            DailyGameAfterBilling_Flag = true, TopUpVoucherAfterBilling_Flag = true, LottoAfterBilling_Flag = true, hasConnected = false, IsPassWordChangeNeeded = false, isfreeTicketFlag = true,
-            AlertDialogVisibleFlag = true, DGTimerRefreshFlag = false, BettingFulFillFalg = true;
+    public static boolean AuthorizationFlag = false, timerTaskFlag = false, IsConnected = false, IsMacRegidtered = false, IsNetworkConnection = false, IsRetailer, IsLogoAvailable,
+            topUpemptyFlag = false, topUpcancelFlag = false, DailyGameAfterBilling_Flag = true, TopUpVoucherAfterBilling_Flag = true, LottoAfterBilling_Flag = true,
+            hasConnected = false, IsPassWordChangeNeeded = false, isfreeTicketFlag = true, AlertDialogVisibleFlag = true, DGTimerRefreshFlag = false, BettingFulFillFalg = true,
+            EnableCashoutValidation = false, BarcodeScan = false;
 
-    public static String[] defaultPOSPro = {"E-Topup", "TopupVoucher", "LiveBetting", "SportsBetting", "Dailygame", "Lotto", "Commissions", "Transaction", "OnlinePayout", "Balance", "Reset Password"},
+    public static String[] defaultPOSPro = {"E-Topup", "TopupVoucher", "LiveBetting", "SportsBetting", "Dailygame", "Lotto", "Commissions", "Transaction",
+            "OnlinePayout", "Balance", "Reset Password", "PlayableTickets", "TicketPayout"},
             defaultPOSProFlag = {"TopupCancel"};
 
-    public static int[] defaultPOSPro_img = {R.mipmap.hm_etop, R.mipmap.hm_topup, R.mipmap.hm_livebet,
-            R.mipmap.hm_sportbet, R.mipmap.hm_dailygame, R.mipmap.hm_lotto,
-            R.mipmap.hm_commission, R.mipmap.hm_transection, R.mipmap.hm_cashout, R.mipmap.hm_balance, R.mipmap.hm_password};
+    public static int[] defaultPOSPro_img = {R.mipmap.hm_etop, R.mipmap.hm_topup, R.mipmap.hm_livebet, R.mipmap.hm_sportbet, R.mipmap.hm_dailygame,
+            R.mipmap.hm_lotto, R.mipmap.hm_commission, R.mipmap.hm_transection, R.mipmap.hm_e_cashout, R.mipmap.hm_balance, R.mipmap.hm_password,
+            R.mipmap.hm_playable_ticket, R.mipmap.hm_ticket_payout};
 
     public static Bitmap ClientLogo, DGProdLogo, LGProdLogo, VoucherLogo;
     public static byte[] Clientlogobyte, DGProdLogoByte;
@@ -109,7 +119,7 @@ public class Common {
     public static ArrayList<Clientproductname> ClientProductDetails = new ArrayList<>();
     public static ArrayList<Clientproductname> ClientFlterProductDetails = new ArrayList<>();
     public static ArrayList<Clientcurrency> ClientCurrency = new ArrayList<>();
-    public static ArrayList<ClientDenominationModel> ClientDenomination = new ArrayList<>();
+    public static ArrayList<DenominationModel> ClientDenomination = new ArrayList<>();
 
     public static ArrayList<String> POSDefault_ClientProducts = new ArrayList<>();
     public static ArrayList<Bitmap> POSDefault_ClientProducts_img = new ArrayList<>();
@@ -170,6 +180,15 @@ public class Common {
     public static ArrayList<Balance_DenominationPojo> Denomination_balanceListArray = new ArrayList<>();
     public static ArrayList<Balance_TotalDenomPojo> TotalDenom_balanceListArray = new ArrayList<>();
     /*Languages*/
-    public static ArrayList<LanguagesListModel> Languages ;
+    public static ArrayList<LanguagesListModel> Languages;
     public static HashMap<String, String> LanguageMap = new HashMap();
+
+
+    public static void HideKeyboard(Activity activity) {
+        View view = activity.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
+    }
 }

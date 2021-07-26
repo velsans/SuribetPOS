@@ -43,7 +43,7 @@ public class UserAuthentication extends AsyncTask<Object, Object, Object> {
         Common.listCurrencyDetails = new ArrayList<>();
         Common.listProductDetails = new ArrayList<>();
 
-        String ControllerName = ServiceURL.BASE_URL;
+        String ControllerName = ServiceURL.BASE_URL;DoWithdrawPayment
         Uri.Builder DGUrlPLD = new Uri.Builder();
         DGUrlPLD.appendPath("security")// Controllor
                 .appendPath("GetSecuritySBValidateUser");// Method name

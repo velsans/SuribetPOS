@@ -172,7 +172,7 @@
                             android:gravity="right|center"
                             android:text="Total Cancel Count"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@drawable/white"/>
+                            android:textColor="@color/white"/>
 
                         <View
                             android:layout_width="1dp"
@@ -218,7 +218,7 @@
                             android:gravity="right|center"
                             android:text="Total Cancel Amount"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@drawable/white"/>
+                            android:textColor="@color/white"/>
 
                         <View
                             android:layout_width="1dp"

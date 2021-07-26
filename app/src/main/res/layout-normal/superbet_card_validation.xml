@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/result_view"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:id="@+id/BarcodeEditLAY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/textview_or_edittext_hight"
+        android:layout_marginRight="@dimen/textview_or_edittext_hight"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:text="@string/card_validation"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/cardVal_close"
+                android:layout_width="@dimen/textview_or_edittext_hight_normal"
+                android:layout_height="@dimen/textview_or_edittext_hight_normal"
+                android:layout_gravity="right"
+                app:srcCompat="@mipmap/close" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/cardVal_profile"
+            android:layout_width="@dimen/textview_or_edittext_width_xlarge"
+            android:layout_height="@dimen/textview_or_edittext_width_xlarge"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/large_space"
+            android:background="@color/fiveColor"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/large_space"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cardVal_scanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp"
+                android:layout_weight="4"
+                app:srcCompat="@mipmap/barcodeicon" />
+
+            <EditText
+                android:id="@+id/cardVal_cardnumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/edittextstyle"
+                android:ems="10"
+                android:hint="@string/card_number_barcode"
+                android:inputType="number"
+                android:paddingLeft="@dimen/spacing_normal"
+                android:textColor="@color/white"
+                android:textColorHint="@color/fiveColor" />
+
+            <ImageView
+                android:id="@+id/cardVal_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                app:srcCompat="@mipmap/searchball" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cardVal_customerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/normal_space"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_weight="1"
+            android:background="@drawable/edittextstyle"
+            android:gravity="left|center"
+            android:hint="@string/customer_name"
+            android:paddingLeft="@dimen/spacing_normal"
+            android:textColor="@color/white"
+            android:textColorHint="@color/fiveColor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_normal"
+            android:layout_marginTop="@dimen/normal_space"
+            android:layout_marginRight="@dimen/spacing_normal"
+            android:layout_marginBottom="@dimen/large_space"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/cardVal_Cancel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/clear_back"
+                android:gravity="center"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/cardVal_SaveAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/login_background"
+                android:gravity="center"
+                android:text="@string/save" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

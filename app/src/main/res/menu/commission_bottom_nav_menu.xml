@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/breakupdetailsFragment"
+        android:icon="@drawable/ticket_icon"
+        android:title="@string/BreakUp" />
+
+    <item
+        android:id="@+id/cashoutCommissionFragment"
+        android:icon="@drawable/ticket_cancel_icon"
+        android:title="@string/cashout" />
+    <item
+        android:id="@+id/topupCommissionFragment"
+        android:icon="@drawable/ticket_cancel_icon"
+        android:title="@string/TopUp" />
+
+</menu>

@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
@@ -85,8 +86,23 @@ public abstract class BaseActivity extends AppCompatActivity implements LogOutLi
     @Override
     protected void onPause() {
         super.onPause();
+        //((MyApp) getApplication()).cancelTimer();
+        //((MyApp) getApplication()).startUserSession();
+        Log.e("BaseActivity", "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
         ((MyApp) getApplication()).cancelTimer();
-        ((MyApp) getApplication()).startUserSession();
+        Log.e("onStop", ">>>>>>>>");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ((MyApp) getApplication()).cancelTimer();
+        Log.e("BaseActivity", "onDestroy");
     }
 
     @Override
@@ -94,11 +110,13 @@ public abstract class BaseActivity extends AppCompatActivity implements LogOutLi
         super.onResume();
         ((MyApp) getApplication()).cancelTimer();
         ((MyApp) getApplication()).startUserSession();
+        Log.e("BaseActivity", "onResume");
     }
-  /*  @Override
-    protected void attachBaseContext(Context base) {
-        super.attachBaseContext(LocaleManager.setLocale(base));
-    }*/
+
+    /*  @Override
+      protected void attachBaseContext(Context base) {
+          super.attachBaseContext(LocaleManager.setLocale(base));
+      }*/
     protected void resetTitles() {
         try {
             ActivityInfo info = getPackageManager().getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);

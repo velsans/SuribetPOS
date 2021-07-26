@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large">
+
+        <TextView
+            android:id="@+id/cancelled_barcode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/oneColor"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/cancelled_amt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/twoColor"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/cancelled_by"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/threerColor"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/cancelled_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/fourColor"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_background"></View>
+</LinearLayout>

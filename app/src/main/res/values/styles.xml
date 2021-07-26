@@ -38,6 +38,11 @@
         <item name="android:textSize">@dimen/font_size_normal</item>
         <item name="android:textColorHint">@color/edittext_hint</item>
     </style>
+    <style name="PTTextViewTheme">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@color/edittext_hint</item>
+    </style>
 
     <style name="PDF_LargeTextViewTheme">
         <item name="android:textColor">@android:color/black</item>
@@ -73,7 +78,28 @@
     <style name="Theme.MyDialog" parent="@android:style/Theme.Dialog">
         <item name="android:textColor">@color/white</item>
     </style>
+
     <style name="mySpinnerItemStyle" parent="Base.Widget.AppCompat.Spinner">
         <item name="android:textColor">@color/white</item>
     </style>
+
+    //Playable Ticket
+
+    <style name="Theme.RoomDataBaseWithFireBase" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Theme.RoomDataBaseWithFireBase.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.RoomDataBaseWithFireBase.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.RoomDataBaseWithFireBase.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

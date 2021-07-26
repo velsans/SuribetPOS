@@ -10,7 +10,7 @@
         android:layout_width="@dimen/printingmaxsize"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:background="@drawable/black"
+        android:background="@color/black"
         android:visibility="visible">
 
         <LinearLayout
@@ -37,7 +37,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="left|center"
-                    android:padding="10dp"
+                    android:padding="@dimen/padding_large"
                     android:text="@string/cancelled"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textSize="40dp"
@@ -176,7 +176,7 @@
         android:layout_width="@dimen/printingmaxsize"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@drawable/black"
+        android:background="@color/black"
         android:visibility="visible">
 
         <LinearLayout
@@ -858,7 +858,7 @@
                                     android:padding="3dp"
                                     android:src="@mipmap/barcodeicon"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@drawable/black"
+                                    android:textColor="@color/black"
                                     android:textStyle="bold" />
 
                                 <EditText
@@ -887,7 +887,7 @@
                                 android:padding="3dp"
                                 android:src="@mipmap/searchball"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
-                                android:textColor="@drawable/black"
+                                android:textColor="@color/black"
                                 android:textStyle="bold" />
 
 
@@ -916,7 +916,7 @@
                                     android:gravity="center"
                                     android:text="Pick 1"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@drawable/black"
+                                    android:textColor="@color/black"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -928,7 +928,7 @@
                                     android:gravity="center"
                                     android:text="Pick 5"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@drawable/black"
+                                    android:textColor="@color/black"
                                     android:textStyle="bold" />
 
                                 <TextView
@@ -940,7 +940,7 @@
                                     android:gravity="center"
                                     android:text="Pick 10"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@drawable/black"
+                                    android:textColor="@color/black"
                                     android:textStyle="bold" />
 
                             </LinearLayout>
@@ -1392,7 +1392,7 @@
                 android:gravity="center"
                 android:text="Result"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@drawable/white" />
+                android:textColor="@color/white" />
 
             <com.suribetpos.main.utilities.VerticalTextView
                 android:id="@+id/print_handle"
@@ -1404,7 +1404,7 @@
                 android:gravity="center"
                 android:text="Print"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textColor="@drawable/white"
+                android:textColor="@color/white"
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>

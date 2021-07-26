@@ -2,6 +2,7 @@ package com.suribetpos.main.data.fcm;
 
 import android.app.IntentService;
 
+import java.io.ByteArrayOutputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -15,7 +16,17 @@ import java.net.URLConnection;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Environment;
+import android.util.Log;
+
+import com.google.firebase.crashlytics.internal.network.HttpResponse;
+
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+
+import okhttp3.OkHttpClient;
+import okhttp3.internal.http.StatusLine;
 
 public class DownloadService extends IntentService {
 
@@ -24,7 +35,10 @@ public class DownloadService extends IntentService {
     public static final String FILENAME = "filename";
     public static final String FILEPATH = "filepath";
     public static final String RESULT = "result";
-    public static final String NOTIFICATION = "service receiver";
+    public static final String NOTIFICATION = "InstallReceiver";
+
+    private static final int REGISTRATION_TIMEOUT = 3 * 1000;
+    private static final int WAIT_TIMEOUT = 30 * 1000;
 
     public DownloadService() {
         super("DownloadService");

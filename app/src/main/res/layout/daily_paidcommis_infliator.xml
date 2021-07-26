@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/textview_or_edittext_hight"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/daily_paid_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/threerColor"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/daily_paid_amount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/fourColor"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/daily_paid_x"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/fiveColor"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/daily_paid_paid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/freeletterColor"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/daily_paid_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/freeletterColor"
+        android:gravity="center" />
+</LinearLayout>

@@ -42,9 +42,9 @@
     <color name="icon_background">#464646</color>
 
 
-    <drawable name="white">#ffffff</drawable>
-    <drawable name="black">#000000</drawable>
-    <drawable name="grey">#778899</drawable>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="grey">#778899</color>
 
 
     <color name="abc_search_url_text_normal">#ff7fa87f</color>
@@ -110,7 +110,6 @@
     <color name="trans_headerHeadlightgreen">#00bfa5</color>
     <color name="trans_headerHeadblue2">#0288D1</color>
     <color name="trans_headerHeadverylightgreen">#69f0ae</color>
-    <color name="white">#FFFFFF</color>
 
     <color name="drawColor">#f1fff0</color>
     <color name="jackpotColor">#008001</color>
@@ -121,6 +120,11 @@
     <color name="fiveColor">#c1feff</color>
     <color name="freeletterColor">#c0c0ff</color>
     <color name="winnerColor">#e5e6fa</color>
+    <color name="pt_Color">#414a4c</color>
+    <color name="colorGrey">#dddddd</color>
+
+
+
 
 
 </resources>

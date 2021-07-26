@@ -49,14 +49,14 @@
                         android:layout_width="@dimen/textview_or_edittext_hight_normal"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="@dimen/padding_large"
                         android:src="@mipmap/map" />
 
                     <TextView
                         android:id="@+id/tvCountry"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="@dimen/padding_large"
                         android:layout_weight="1"
                         android:gravity="left|center"
                         android:text="Suriname"
@@ -75,14 +75,14 @@
                         android:layout_width="@dimen/textview_or_edittext_hight_normal"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="@dimen/padding_large"
                         android:src="@mipmap/clock" />
 
                     <TextView
                         android:id="@+id/tvTime"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="@dimen/padding_large"
                         android:layout_weight="1"
                         android:gravity="left|center"
                         android:text="Hello  "

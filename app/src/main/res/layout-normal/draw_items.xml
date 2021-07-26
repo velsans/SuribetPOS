@@ -26,7 +26,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="left|center"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/padding_large"
             android:src="@mipmap/clock"/>
 
         <TextView
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/textview_or_edittext_hight_normal"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="@dimen/padding_large"
             android:layout_toRightOf="@id/draw_items_txt"
             android:gravity="left|center"
             android:text="Draw Time"

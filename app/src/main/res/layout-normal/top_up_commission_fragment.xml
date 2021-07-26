@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:theme="@style/NormalTextViewTheme">
+
+    <TextView
+        android:id="@+id/topup_headtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:background="@color/red"
+        android:gravity="center"
+        android:padding="1dp"
+        android:text="@string/TopUp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/fromdateTodateTopup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_whit"
+        android:gravity="left|center"
+        android:paddingStart="10dp"
+        android:text="@string/Date"
+        android:textColor="@color/edittext_hint"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topup_headtxt" />
+
+    <TextView
+        android:id="@+id/time_searchView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/BarCode"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topup_recyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/textView76"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromdateTodateTopup"
+        app:layout_constraintVertical_bias="0.0">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topup_recyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/textView77"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/time_searchView"
+        app:layout_constraintTop_toTopOf="@+id/time_searchView"
+        app:layout_constraintVertical_bias="0.501" />
+
+    <TextView
+        android:id="@+id/textView77"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/Amount"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topup_recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView76"
+        app:layout_constraintTop_toTopOf="@+id/textView76" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/topup_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/primary"
+        app:layout_constraintBottom_toTopOf="@+id/detailsguideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_searchView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/detailsguideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".89" />
+
+    <LinearLayout
+        android:id="@+id/totalsoldvalues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/detailsguideline">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/total_sold"
+            android:textColor="@color/red" />
+
+
+        <TextView
+            android:id="@+id/tv_txtSoldTotal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblAccountNumber"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalsalescommissionvalues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalsoldvalues">
+
+
+        <TextView
+            android:id="@+id/tv_salesComission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/Total_sales_Commission"
+            android:textColor="@color/red" />
+
+
+        <TextView
+            android:id="@+id/tv_Comission"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lblAccountNumber"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_background"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/totalsalescommissionvalues">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="@string/Balance"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/txtBalReturn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/green" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

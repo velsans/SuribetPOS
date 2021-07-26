@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/betslip_back"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtViewDrawNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:gravity="left|center"
+        android:text="1111"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/color_whit"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDrawPickNumber"
+        android:layout_width="@dimen/textview_or_edittext_hight"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:background="@mipmap/betball"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="number|phone"
+        android:padding="5dp"
+        android:text="20"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/color_whit"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="2dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/textViewStake"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+            android:background="@drawable/betslip_innnerglow"
+            android:gravity="left|center"
+            android:imeOptions="actionNext"
+            android:inputType="numberDecimal"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="30.00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold"></EditText>
+
+        <TextView
+            android:id="@+id/win_amtTxt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/textview_or_edittext_hight_normal"
+            android:gravity="left|center"
+            android:padding="2dp"
+            android:text="Win : 0.00"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/color_whit"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary_heding" />
+
+    <TextView
+        android:id="@+id/txt_multiplier"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:text="30"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/color_whit"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary_heding" />
+
+    <ImageView
+        android:id="@+id/imgButtonCancel"
+        android:layout_width="@dimen/textview_or_edittext_hight"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:layout_gravity="center"
+        android:padding="7dp"
+        android:src="@mipmap/ic_close_red_1024dp" />
+</LinearLayout>
+
+

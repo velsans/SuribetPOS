@@ -1,5 +1,7 @@
 package com.suribetpos.main.data.model.topup;
 
+import com.suribetpos.main.ui.topup.model.CancelledVoucherModel;
+
 import java.util.ArrayList;
 
 public class Cancelsalevoucherhistory
@@ -28,13 +30,13 @@ public class Cancelsalevoucherhistory
 	}
 
 	String MacAddress ;
-    ArrayList<Cancelsalevoucherhistorylist> objListCancelSalesVouchers ;
+    ArrayList<CancelledVoucherModel> objListCancelSalesVouchers ;
 
-	public ArrayList<Cancelsalevoucherhistorylist> getobjListCancelSalesVouchers() {
+	public ArrayList<CancelledVoucherModel> getobjListCancelSalesVouchers() {
 		return objListCancelSalesVouchers;
 	}
 
-	public void setObjListCancelSalesVouchers(ArrayList<Cancelsalevoucherhistorylist> objListCancelSalesVouchers) {
+	public void setObjListCancelSalesVouchers(ArrayList<CancelledVoucherModel> objListCancelSalesVouchers) {
 		this.objListCancelSalesVouchers = objListCancelSalesVouchers;
 	}
 }

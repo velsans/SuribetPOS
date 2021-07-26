@@ -2,6 +2,7 @@ package com.suribetpos.main.data.model.common;
 
 
 import com.suribetpos.main.data.model.topup.Salesvouchers;
+import com.suribetpos.main.ui.topup.model.TopupPrintoutDetailsModel;
 
 import java.util.List;
 
@@ -30,7 +31,7 @@ public class Addupdatevoucherwithusertopupcard {
     }
 
     private String AlternativeMobileNumber;
-    private List<Addupdateprintvouchersdetails> AddUpdatePrintVouchersDetails;
+    private List<TopupPrintoutDetailsModel> AddUpdatePrintVouchersDetails;
 
 
     public void setClientName(String clientName) {
@@ -167,11 +168,11 @@ public class Addupdatevoucherwithusertopupcard {
         return SuccessMessage;
     }
 
-    public void setaddupdateprintvouchersdetails(List<Addupdateprintvouchersdetails> addUpdatePrintVouchersDetails) {
+    public void setaddupdateprintvouchersdetails(List<TopupPrintoutDetailsModel> addUpdatePrintVouchersDetails) {
         AddUpdatePrintVouchersDetails = addUpdatePrintVouchersDetails;
     }
 
-    public List<Addupdateprintvouchersdetails> getaddupdateprintvouchersdetails() {
+    public List<TopupPrintoutDetailsModel> getaddupdateprintvouchersdetails() {
         return AddUpdatePrintVouchersDetails;
     }
 

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class TillEtopUpTransactionsModel {
     int UserId, TillId, ClientId;
-    String MacAddress,CollectedDate;
+    String MacAddress, CollectedDate;
 
     public int getUserId() {
         return UserId;
@@ -39,8 +39,9 @@ public class TillEtopUpTransactionsModel {
     public void setMacAddress(String macAddress) {
         MacAddress = macAddress;
     }
-    ArrayList<StatusModel> Table=new ArrayList<>();
-    ArrayList<TodaysTransectionModel> Table1=new ArrayList<>();
+
+    ArrayList<StatusModel> Table = new ArrayList<>();
+    ArrayList<TodaysTransectionModel> Table1 = new ArrayList<>();
 
     public ArrayList<StatusModel> getTable() {
         return Table;
@@ -65,4 +66,5 @@ public class TillEtopUpTransactionsModel {
     public void setCollectedDate(String collectedDate) {
         CollectedDate = collectedDate;
     }
+
 }

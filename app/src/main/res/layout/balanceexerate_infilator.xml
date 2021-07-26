@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight_large"
+        android:background="@color/color_whit"
+        >
+
+        <TextView
+            android:id="@+id/refer_currency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CURRENCY"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView
+            android:id="@+id/refer_rate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="RATE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView
+            android:id="@+id/ref_usd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="REF.USD"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView
+            android:id="@+id/refer_forgin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="REF.FOREIGN?"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+    </LinearLayout>
+
+</LinearLayout>

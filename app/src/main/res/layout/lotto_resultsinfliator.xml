@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LottotitleSelected"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/textview_or_edittext_hight"
+        android:background="@color/color_whit">
+
+        <LinearLayout
+            android:layout_width="@dimen/lottorecentsizeLarge"
+            android:layout_height="match_parent"
+            android:background="@color/drawColor"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/result_drawid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Draw ID"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/result_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="29-jun-2017"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="@dimen/lottorecentsizeLarge"
+            android:layout_height="match_parent"
+            android:background="@color/jackpotColor"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/result_jackpot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=" JackPot "
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/result_jackpotSRD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SRD"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/login_background" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/result_number1"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/oneColor"
+                android:gravity="center"
+                android:text="01"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_number2"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/twoColor"
+                android:gravity="center"
+                android:text="02"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_number3"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/threerColor"
+                android:gravity="center"
+                android:text="03"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_number4"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/fourColor"
+                android:gravity="center"
+                android:text="04"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_number5"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/fiveColor"
+                android:gravity="center"
+                android:text="05"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_number6"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/drawColor"
+                android:gravity="center"
+                android:text="06"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+            <TextView
+                android:id="@+id/result_freeletter"
+                android:layout_width="43dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/freeletterColor"
+                android:gravity="center"
+                android:text="Letter"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/login_background" />
+
+
+            <TextView
+                android:id="@+id/result_winner"
+                android:layout_width="43dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@color/winnerColor"
+                android:gravity="center"
+                android:text="Winner"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/login_background" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/login_background" />
+
+
+</LinearLayout>

@@ -4,17 +4,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Build;
-import android.widget.Toast;
 
 import com.suribetpos.R;
-import com.suribetpos.main.data.fcm.AutoUpdateHelper;
-import com.suribetpos.main.data.fcm.DownloadService;
-import com.suribetpos.main.ui.view.UserAuthenticationActivity;
 
 public class AlertDialogManager {
-    AlertDialog alertDialog = null;
+    public static AlertDialog alertDialog = null;
     AlertDialog.Builder builder1 = null;
 
     public void showAlertDialog(final Context context, String title, String message,
@@ -31,17 +26,15 @@ public class AlertDialogManager {
             // Setting alert dialog collector
             alertDialog.setIcon((status) ? R.mipmap.success : R.mipmap.fail);
         // Setting OK Button
-        alertDialog.setButton(CommonMessage(context, R.string.Okay), new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                Common.AlertDialogVisibleFlag = true;
-                if (Common.AuthorizationFlag == true) {
-                   /* Intent intent = new Intent(context, LoginActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                    //session.logoutUser();
-                    context.startActivity(intent);*/
-                    Common.AuthorizationFlag = false;
-                }
+        alertDialog.setButton(CommonMessage(context, R.string.Okay), (dialog, which) -> {
+            Common.AlertDialogVisibleFlag = true;
+            if (Common.AuthorizationFlag == true) {
+               /* Intent intent = new Intent(context, LoginActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                //session.logoutUser();
+                context.startActivity(intent);*/
+                Common.AuthorizationFlag = false;
             }
         });
         // Showing Alert Message
