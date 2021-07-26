@@ -1,1 +1,3 @@
+include ':bottommenu'
+include ':app:menubar'
 include ':app'
